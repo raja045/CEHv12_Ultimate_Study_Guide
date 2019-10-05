@@ -40,4 +40,4 @@ Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of s
 
 # **Ethical Hacking and Countermeasures Notes**
 
-#### [17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
+#### [Module 17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
