@@ -40,4 +40,5 @@ Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of s
 
 # **Ethical Hacking and Countermeasures Notes**
 
+#### [Module 18 - Hacking Mobile Platforms](Module 16 - Hacking Wireless Networks.md)
 #### [Module 17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
