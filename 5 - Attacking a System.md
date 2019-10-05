@@ -1,5 +1,3 @@
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
-
 # Attacking a System
 
 <u>Windows Security Architecture</u>
@@ -220,3 +218,6 @@
 - **Kernel level** - attack boot sectors and kernel level replacing kernel code with back-door code; most dangerous
 - **Library level** - use system-level calls to hide themselves
 - One way to detect rootkits is to map all the files on a system and then boot a system from a clean CD version and compare the two file systems
+
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

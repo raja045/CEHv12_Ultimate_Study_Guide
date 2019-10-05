@@ -1,5 +1,3 @@
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
-
 # The Pen Test:  Putting It All Together
 
 - **Security Assessment** - test performed in order to assess the level of security on a network or system
@@ -44,3 +42,5 @@
   - **Insider Associate** - someone with limited authorized access such as a contractor, guard or cleaning service person
   - **Insider Affiliate** - spouse, friend or client of an employee who uses the employee's credentials to gain access
   - **Outside Affiliate** - someone outside the organization who uses an open access channel to gain access to an organization's resources
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

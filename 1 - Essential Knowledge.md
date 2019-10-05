@@ -1,5 +1,3 @@
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
-
 # Essential Knowledge
 
 ### <u>The OSI Reference Model</u>
@@ -301,3 +299,5 @@ tect patient medical records and health information shared between doctors, hosp
 - **Detective** -  Controls used to monitor and alert on malicious or unauthorized activity , such as IDS's and CCTV feeds monitored in real life
 - **Corrective** - Controls used to repair damage caused by malicious events. Such as AntiVirus software and IPS (IPS being both a detective and corrective control) 
 - **Recovery**
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

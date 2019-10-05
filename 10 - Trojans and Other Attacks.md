@@ -1,5 +1,3 @@
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
-
 # Trojans and Other Attacks
 
 ### <u>Malware Basics</u>
@@ -198,3 +196,5 @@
     - **Internet Key Exchange** (IKE) - produces the keys for the encryption process
     - **Oakley** - uses Diffie-Hellman to create master and session keys
     - ** Internet Security Association Key Management Protocol** (ISAKMP) - software that facilitates encrypted communication between two endpoints
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

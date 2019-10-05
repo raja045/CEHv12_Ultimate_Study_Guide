@@ -1,5 +1,3 @@
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
-
 # Cryptography 101
 
 ### <u>Cryptograph Basics</u>
@@ -195,3 +193,5 @@
   - Jipher
 - Keys should still change on a regular basis even though they may be "unhackable"
 - Per U.S. government, an algorithm using at least a 256-bit key cannot be cracked
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

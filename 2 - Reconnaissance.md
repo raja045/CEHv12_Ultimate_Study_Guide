@@ -1,5 +1,3 @@
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
-
 # Reconnaissance
 
 ### <u>Footprinting</u>
@@ -142,3 +140,5 @@
 - **Shodan** - search engine that shows devices connected to the Internet
 
 **Computer Security Incident Response Team** (CSIRT) - point of contact for all incident response services for associates of the DHS
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

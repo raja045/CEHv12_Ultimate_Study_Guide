@@ -1,5 +1,3 @@
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
-
 # Hacking Mobile Platforms
 
 ### <u>Mobile Platform Attack Vectors</u>
@@ -130,3 +128,6 @@
 
 
 ### <u>Mobile Device Management</u>
+
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
