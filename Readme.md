@@ -1,12 +1,16 @@
-# CEH v10 Study Guide
+# CEHv10 Ultimate Study Guide
 
-Created based off information found in [CEH Certified Ethical Hacker All-in-One Exam Guide, Fourth Edition](https://www.amazon.com/gp/product/126045455X/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) by Matt Walker and [EC-Conuncil Ethical Hacking and Countermeasures Vol 1 and 2](https://store.eccouncil.org/product/cehv10-courseware/)
+## **Sources**
+Created based off information found in [CEH Certified Ethical Hacker All-in-One Exam Guide, Fourth Edition](https://www.amazon.com/gp/product/126045455X/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) by Matt Walker
 
-Some notes have been taken from [scottymcraig CEHv10StudyGuide Github](https://github.com/scottymcraig/CEHv10StudyGuide) (Not going to reinvent the wheel)
+[EC-Council Ethical Hacking and Countermeasures Vol 1 and 2](https://store.eccouncil.org/product/cehv10-courseware/)
 
-Content has been added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGuide Github](https://github.com/karsyboy/CEHv10StudyGuide)
+## **Contributions**
+CEH All-in-One Exam Guide Notes have been taken from [scottymcraig CEHv10StudyGuide Github](https://github.com/scottymcraig/CEHv10StudyGuide) (Not going to reinvent the wheel)
 
-## CEH All-in-One Exam Guide Notes
+Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGuide Github](https://github.com/karsyboy/CEHv10StudyGuide)
+
+# **CEH All-in-One Exam Guide Notes**
 
 [1 - Essential Knowledge](1 - Essential Knowledge.md)
 
@@ -34,5 +38,5 @@ Content has been added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGu
 
 [13 - The Pen Test - Putting It All Together](13 - The Pen Test - Putting It All Together.md)
 
-## Ethical Hacking and Countermeasures Notes
+# **Ethical Hacking and Countermeasures Notes**
 [17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
