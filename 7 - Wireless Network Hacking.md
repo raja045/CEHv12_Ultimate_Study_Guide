@@ -71,16 +71,16 @@
 - **Threats**
   - **Access Control Attacks** - Evading WLAN access control messures such as AP MAC filtering and Wi-Fi port accss
   - **Integrity Attacks** - Send forged control, managment or data frames over a wireless network to misdirect the wirless device
-    ![Wireless Integrity Attacks](.\images\wireless_threats.png)
+    ![Wireless Integrity Attacks](/images/wireless_threats.png)
   
   - **Confidentiality Attacks** - Intercept confidential information send over wireless associations
   ![Wireless Confidentiality Attacks](/images/wireless_confidentiality1.png)
   ![Wireless Confidentiality Attacks](.\images\wireless_confidentiality2.png)
   - **Availability Attacks** - obstructing the delivery of wirelesss serrvices to legitmate users
-  ![Wireless Availability Attacks](.\images\wireless_availability1.png)
-  ![Wireless Availability Attacks](.\images\wireless_availability2.png)
+  ![Wireless Availability Attacks](/images/wireless_availability1.png)
+  ![Wireless Availability Attacks](/images/wireless_availability2.png)
   - **Authentication Attacks** - steal the identity of Wi-Fi clients
-  ![Wireless Authentication Attacks](.\images\wireless_authentication.png)
+  ![Wireless Authentication Attacks](/images/wireless_authentication.png)
 - **Network Discovery**
   - Wardriving, warflying, warwalking, etc.
   - Tools such as WiFiExplorer, WiFiFoFum, OpenSignalMaps, WiFinder
@@ -129,7 +129,7 @@
   - **Tools**
   	- **Aircrack-ng** - sniffer, detector, traffic analysis tool and a password cracker
   	  - Uses dictionary attacks for WPA and WPA 2.  Other attacks are  for WEP only
-        ![Aircrack-ng Suite](.\images\wireless_aircrack-ng.png)
+        ![Aircrack-ng Suite](/images/wireless_aircrack-ng.png)
 	- **Cain and Abel** - sniffs packets and cracks passwords (may take longer)
       - Relies on statistical measures and the PTW technique to break WEP
 	- **KisMAC** - MacOS tool to brute force WEP or WPA passwords
