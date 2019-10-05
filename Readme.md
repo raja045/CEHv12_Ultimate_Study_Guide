@@ -35,3 +35,4 @@ Content has been added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGu
 [13 - The Pen Test - Putting It All Together](13 - The Pen Test - Putting It All Together.md)
 
 ## Ethical Hacking and Countermeasures Notes
+[17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
