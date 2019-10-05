@@ -1,4 +1,4 @@
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
 
 # Wireless Network Hacking
 
@@ -167,4 +167,4 @@
 - **Tools**
   - **Bluetooth View**
   
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

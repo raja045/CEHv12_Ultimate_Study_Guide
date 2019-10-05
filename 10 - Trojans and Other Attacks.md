@@ -1,4 +1,4 @@
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
 
 # Trojans and Other Attacks
 
@@ -199,4 +199,4 @@
     - **Oakley** - uses Diffie-Hellman to create master and session keys
     - ** Internet Security Association Key Management Protocol** (ISAKMP) - software that facilitates encrypted communication between two endpoints
 
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

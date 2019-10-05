@@ -1,4 +1,4 @@
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
 
 # Cryptography 101
 
@@ -196,4 +196,4 @@
 - Keys should still change on a regular basis even though they may be "unhackable"
 - Per U.S. government, an algorithm using at least a 256-bit key cannot be cracked
 
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

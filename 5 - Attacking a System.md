@@ -1,4 +1,4 @@
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
 
 # Attacking a System
 
@@ -221,4 +221,4 @@
 - **Library level** - use system-level calls to hide themselves
 - One way to detect rootkits is to map all the files on a system and then boot a system from a clean CD version and compare the two file systems
 
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

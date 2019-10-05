@@ -1,4 +1,4 @@
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
 
 # Web-Based Hacking - Servers and Applications
 
@@ -162,4 +162,4 @@
   - Is not an attack in and of itself - must be combined with another attack
 - **Countermeasures** - input scrubbing for injection, SQL parameterization for SQL injection, keeping patched servers, turning off unnecessary services, ports and protocols
 
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

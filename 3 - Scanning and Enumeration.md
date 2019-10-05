@@ -1,4 +1,4 @@
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
 
 # Scanning and Enumeration
 
@@ -337,4 +337,4 @@
   - EXPN - provides actual delivery address of mailing list and aliases
   - RCPT TO - defines recipients
 
-  ### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+  ### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

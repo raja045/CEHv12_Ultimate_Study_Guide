@@ -1,4 +1,4 @@
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
 
 # Security in Cloud Computing
 
@@ -60,4 +60,4 @@
 - **Side Channel Attack** - using  an existing VM on the same physical host to attack another
   - This is more broadly defined as using something other than the direct interface to attack a system
 
-### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
