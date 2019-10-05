@@ -2,7 +2,7 @@
 
 Created based off information found in [CEH Certified Ethical Hacker All-in-One Exam Guide, Fourth Edition](https://www.amazon.com/gp/product/126045455X/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) by Matt Walker and [EC-Conuncil Ethical Hacking and Countermeasures Vol 1 and 2](https://store.eccouncil.org/product/cehv10-courseware/)
 
-Original source notes from [scottymcraig CEHv10StudyGuide Github](https://github.com/scottymcraig/CEHv10StudyGuide)
+Some notes have been taken from [scottymcraig CEHv10StudyGuide Github](https://github.com/scottymcraig/CEHv10StudyGuide) (Not going to reinvent the wheel)
 
 Content has been added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGuide Github](https://github.com/karsyboy/CEHv10StudyGuide)
 
