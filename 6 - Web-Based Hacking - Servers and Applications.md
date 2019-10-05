@@ -160,4 +160,4 @@
   - Is not an attack in and of itself - must be combined with another attack
 - **Countermeasures** - input scrubbing for injection, SQL parameterization for SQL injection, keeping patched servers, turning off unnecessary services, ports and protocols
 
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
+### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)

@@ -43,4 +43,4 @@
   - **Insider Affiliate** - spouse, friend or client of an employee who uses the employee's credentials to gain access
   - **Outside Affiliate** - someone outside the organization who uses an open access channel to gain access to an organization's resources
 
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
+### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)

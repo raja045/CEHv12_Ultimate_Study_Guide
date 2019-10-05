@@ -220,4 +220,4 @@
 - One way to detect rootkits is to map all the files on a system and then boot a system from a clean CD version and compare the two file systems
 
 
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
+### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)

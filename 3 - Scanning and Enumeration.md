@@ -335,4 +335,4 @@
   - EXPN - provides actual delivery address of mailing list and aliases
   - RCPT TO - defines recipients
 
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
+### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)

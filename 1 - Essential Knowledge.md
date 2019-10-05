@@ -300,4 +300,4 @@ tect patient medical records and health information shared between doctors, hosp
 - **Corrective** - Controls used to repair damage caused by malicious events. Such as AntiVirus software and IPS (IPS being both a detective and corrective control) 
 - **Recovery**
 
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
+### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)

@@ -127,7 +127,10 @@
 ![IOS Framework](/images/mobile_ios-secure.png)
 
 
-### <u>Mobile Device Management</u>
+### <u>Mobile Device Management (MDM)</u>
 
+- **Mobile Device Management**
+  - Over-the-air or wired distribution of applications and configurations
+  - 
 
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
+### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
