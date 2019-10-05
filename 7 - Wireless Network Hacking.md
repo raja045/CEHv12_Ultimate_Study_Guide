@@ -25,6 +25,10 @@
 - **Spectrum Analyzer** - verifies wireless quality, detects rogue access points and detects attacks
 - **Directional antenna** - signals in one direction; Yagi antenna is a type
 - **Omnidirectional antenna** - signals in all directions
+- **Parapoblic grid antenna** - based on principle of a satellite dish but it does not have a solid backing. They can pick up Wi-Fi singals ten miles or more
+- **Yagi antenna** - unidirectional antenna used for 10MHz to VHF and UHF
+- **Dipole antenna** - Bidrectional antenna used to support client connections rather than site to site applications
+- **Reflector antenna** - Reflector antennas are used to concentrate EM energy which is radiated or recived at a focal point
 - **Service Set Identifier** (SSID) - a text word (<= 32 char) that identifies network; provides no security
 - **Three Types of Authentication**
   - **Open System** - no authentication
