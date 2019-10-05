@@ -47,6 +47,7 @@
   	- Sent in clear text as a part of the header
   	- This combined with RC4 makes it easy to decrypt the WEP key
   	- An attacker can send disassociate requests to the AP to generate a lot of these
+
 - **Wi-Fi Protected Access** (WPA or WPA2)
   - WPA uses TKIP with a 128-bit key
   - WPA changes the key every 10,000 packets
@@ -68,11 +69,18 @@
 ### <u>Wireless Hacking</u>
 
 - **Threats**
-  - Access Control Attacks
-  - Integrity Attacks
-  - Confidentiality Attacks
-  - Availability Attacks
-  - Authentication Attacks
+  - **Access Control Attacks** - Evading WLAN access control messures such as AP MAC filtering and Wi-Fi port accss
+  - **Integrity Attacks** - Send forged control, managment or data frames over a wireless network to misdirect the wirless device
+    ![Wireless Integrity Attacks](.\images\wireless_threats.png)
+  
+  - **Confidentiality Attacks** - Intercept confidential information send over wireless associations
+  ![Wireless Confidentiality Attacks](.\images\wireless_confidentiality1.png)
+  ![Wireless Confidentiality Attacks](.\images\wireless_confidentiality2.png)
+  - **Availability Attacks** - obstructing the delivery of wirelesss serrvices to legitmate users
+  ![Wireless Availability Attacks](.\images\wireless_availability1.png)
+  ![Wireless Availability Attacks](.\images\wireless_availability2.png)
+  - **Authentication Attacks** - steal the identity of Wi-Fi clients
+  ![Wireless Authentication Attacks](.\images\wireless_authentication.png)
 - **Network Discovery**
   - Wardriving, warflying, warwalking, etc.
   - Tools such as WiFiExplorer, WiFiFoFum, OpenSignalMaps, WiFinder
@@ -105,6 +113,9 @@
 - **MAC Filter** - only allows certain MAC addresses on a network
   - Easily broken because you can sniff out MAC addresses already connected and spoof it
   - Tools for spoofing include **SMAC** and **TMAC**
+- **Key Reinstallation Attack** (KRACK) - Works by exploiting the 4-way handshake of the WPA2 protocol by forciing Nonce reuse
+  - Works against all modern protected Wi-Fi Networks
+
 
 ### <u>Wireless Encryption Attacks</u>
 
@@ -118,6 +129,7 @@
   - **Tools**
   	- **Aircrack-ng** - sniffer, detector, traffic analysis tool and a password cracker
   	  - Uses dictionary attacks for WPA and WPA 2.  Other attacks are  for WEP only
+        ![Aircrack-ng Suite](.\images\wireless_aircrack-ng.png)
 	- **Cain and Abel** - sniffs packets and cracks passwords (may take longer)
       - Relies on statistical measures and the PTW technique to break WEP
 	- **KisMAC** - MacOS tool to brute force WEP or WPA passwords
@@ -141,3 +153,4 @@
   - **OmniPeek** - provides data like Wireshark in addition to network activity and monitoring
   - **AirMagnet WiFi Analyzer Pro** - sniffer, traffic analyzer and network-auditing suite
   - **WiFi Pilot**
+
