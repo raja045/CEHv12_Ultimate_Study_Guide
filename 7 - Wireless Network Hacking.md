@@ -71,7 +71,7 @@
 - **Threats**
   - **Access Control Attacks** - Evading WLAN access control messures such as AP MAC filtering and Wi-Fi port accss
   - **Integrity Attacks** - Send forged control, managment or data frames over a wireless network to misdirect the wirless device
-    ![Wireless Integrity Attacks](.\images\wireless_threats.png)
+    ![Wireless Integrity Attacks](../images/wireless_threats.png)
   
   - **Confidentiality Attacks** - Intercept confidential information send over wireless associations
   ![Wireless Confidentiality Attacks](\images\wireless_confidentiality1.png)
