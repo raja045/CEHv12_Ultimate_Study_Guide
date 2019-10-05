@@ -164,5 +164,3 @@
       - Attify
   - **Gaining Access** - same objectives as normal methodology
   - **Maintaining Access** - same objectives as normal methodology
-
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

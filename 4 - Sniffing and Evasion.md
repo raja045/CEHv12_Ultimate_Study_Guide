@@ -231,5 +231,3 @@
   - Specter
   - Honeyd
   - KFSensor
-
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

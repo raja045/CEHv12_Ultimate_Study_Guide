@@ -166,5 +166,3 @@
 ![Bluetooth Attacks](/images/wireless_bluetooth-threats.png)
 - **Tools**
   - **Bluetooth View**
-  
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)

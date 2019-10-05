@@ -161,5 +161,3 @@
   - Can be used to redirect a user to a malicious site
   - Is not an attack in and of itself - must be combined with another attack
 - **Countermeasures** - input scrubbing for injection, SQL parameterization for SQL injection, keeping patched servers, turning off unnecessary services, ports and protocols
-
-### [Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)
