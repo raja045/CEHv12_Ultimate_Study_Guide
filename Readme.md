@@ -6,7 +6,7 @@ Original source notes from [scottymcraig CEHv10StudyGuide Github](https://github
 
 Content has been added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGuide Github](https://github.com/karsyboy/CEHv10StudyGuide)
 
-## CEH Certified Ethical Hacker All-in-One Exam Guide Notes Table of Contents
+## CEH All-in-One Exam Guide Notes
 
 [1 - Essential Knowledge](1 - Essential Knowledge.md)
 
@@ -34,5 +34,5 @@ Content has been added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGu
 
 [13 - The Pen Test - Putting It All Together](13 - The Pen Test - Putting It All Together.md)
 
-## EC-Conuncil Ethical Hacking and Countermeasures Notes
+## Ethical Hacking and Countermeasures Notes
 [17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
