@@ -1,3 +1,5 @@
+### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+
 # Security in Cloud Computing
 
 ### <u>Cloud Computing Basics</u>
@@ -57,3 +59,5 @@
 - **Session riding** - CSRF under a diferent name; deals with cloud services instead of traditional data centers
 - **Side Channel Attack** - using  an existing VM on the same physical host to attack another
   - This is more broadly defined as using something other than the direct interface to attack a system
+
+### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>

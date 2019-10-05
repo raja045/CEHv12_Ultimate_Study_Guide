@@ -1,3 +1,5 @@
+### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
+
 # Scanning and Enumeration
 
 **Scanning** - discovering systems on the network and looking at what ports are open as well as applications that may be running
@@ -334,3 +336,5 @@
   - VRFY - validates user
   - EXPN - provides actual delivery address of mailing list and aliases
   - RCPT TO - defines recipients
+
+  ### <u>[Table Of Contents](https://karsyboy.github.io/CEHv10StudyGuide/)</u>
