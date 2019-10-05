@@ -8,7 +8,7 @@
   - **M3 - Insecure Communication** - poor handshaking, incorrect SSL, clear-text communication
   - **M4 - Insecure Authentication** - authenticating end user or bad session management
   - **M5 - Insufficient Cryptography** - code that applies cryptography to an asset, but is insufficient (does NOT include SSL/TLS)
-  - **M6 - Insecure Authorization** - failures in authroization (access rights)
+  - **M6 - Insecure Authorization** - failures in authorization (access rights)
   - **M7 - Client Code Quality** - catchall for code-level implementation problems
   - **M8 - Code Tampering** - binary patching, resource modification, dynamic memory modification
   - **M9 - Reverse Engineering** - reversing core binaries to find problems and exploits
@@ -17,16 +17,16 @@
 #### **Anatomy of a Mobile Attack**
 ![Anatomy of a Mobile Attack](/images/mobile_anatomy.png)
 
-#### **Hackers Proffit**   
+#### **Hackers Profit**   
 ![Info that Hackers can Exploit](/images/mobile_hacker-profit.png)
 
 #### **Mobile Attack Vectors**
 ![Attack Vectors](/images/mobile_attack-vectors.png)
 
-#### **Platform Vulnerbilities and Risk**
+#### **Platform Vulnerabilities and Risk**
 - **Malicious app in stores** 
   - No vetting of apps
-- **Mobile Application vulnerbilities**
+- **Mobile Application vulnerabilities**
 - **Mobile Malware**
 - **Privacy Issues (Geolocation)**
 - **App sandboxing vulnerabilities** 
@@ -42,7 +42,7 @@
   - Unsolicited text/email messages sent to mobile devices
   - Can contain ads or malicious links
 - **SMS Phishing Attack**
-  - Aquire personal and financial information by sending SMS
+  - Acquire personal and financial information by sending SMS
   - Acts the same as a phishing attack but instead uses SMS
 - **Pairing to Open Bluetooth and Wi-Fi Connections**
   - Allows for eavesdrop and interception of data transmission
@@ -51,7 +51,7 @@
 ### <u>Hacking Android OS</u>
 
 - **Android OS Basic Info**
-  - Devolped by google
+  - Developed by google
   - **Features**
     - Enabling reuse and replacement of components
     - Variety of pre-build UI components
@@ -62,13 +62,13 @@
 ![Attack Vectors](/images/mobile_androidos.png)
 
 - **Android Device Administration API** 
-  - Allows for security-aware apps that may IT professionals
+  - Allows for security-aware apps that may help IT professionals
 ![Attack Vectors](/images/mobile_androidap1.png)
 ![Attack Vectors](/images/mobile_androidap2.png)
 
 - **Android Rooting**
   - Allows user to attain privileged control within androids subsystem
-  - Involves exokiutubg security vulnerbilities in the device firmware and granting execute permissions
+  - Involves executing security vulnerabilities in the device firmware and granting execute permissions
   - **Rooting Tool**
     - **KingoRoot** - can be used with or without a PC
     - **TunesGo - Root Android** - Done with PC
@@ -85,9 +85,9 @@
     - Man-in-Middle attack
     - DoS attaack
   - **Network Spoofer** - Change websites on other peoples computers
-  - **Low Orbit Ion Cannon** - Perfrom DoS and DDoS attacks
-  - **DroidSheep** - Pefrom web session hijacking
-  - **Orbot** - Proxy app that hids identity
+  - **Low Orbit Ion Cannon** - Perform DoS and DDoS attacks
+  - **DroidSheep** - Perform web session hijacking
+  - **Orbot** - Proxy app that hides identity
   - **FaceNiff** - Sniff and intercept web session profiles
   - **Android Trojans**
     - **BankBot**
