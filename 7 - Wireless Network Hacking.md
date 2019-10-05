@@ -154,3 +154,14 @@
   - **AirMagnet WiFi Analyzer Pro** - sniffer, traffic analyzer and network-auditing suite
   - **WiFi Pilot**
 
+### <u>Bluetooth Hacking</u>
+
+- **Bluetooth Stack**  - replaces the cables connection portable or fixed devices
+![Bluetooth Protocol Design](/images/wireless_bluetooth-stack.png)
+- **Attacks**
+![Bluetooth Attacks](/images/wireless_bluetooth-attacks.png)
+- **Threats**
+![Bluetooth Attacks](/images/wireless_bluetooth-threats.png)
+- **Tools**
+  - **Bluetooth View**
+  
