@@ -113,8 +113,6 @@
 - **MAC Filter** - only allows certain MAC addresses on a network
   - Easily broken because you can sniff out MAC addresses already connected and spoof it
   - Tools for spoofing include **SMAC** and **TMAC**
-- **Key Reinstallation Attack** (KRACK) - Works by exploiting the 4-way handshake of the WPA2 protocol by forciing Nonce reuse
-  - Works against all modern protected Wi-Fi Networks
 
 
 ### <u>Wireless Encryption Attacks</u>
@@ -142,6 +140,8 @@
   - Much more difficult than WEP
   - Uses a constantly changing temporal key and user-defined password
   - **Key Reinstallation Attack** (KRACK) - replay attack that uses third handshake of another device's session
+    - Works by exploiting the 4-way handshake of the WPA2 protocol by forciing Nonce reuse
+    - Works against all modern protected Wi-Fi Networks
   - Most other attacks are simply brute-forcing the password
 
 ### <u>Wireless Sniffing</u>
