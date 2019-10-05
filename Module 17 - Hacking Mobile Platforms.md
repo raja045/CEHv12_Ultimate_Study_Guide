@@ -150,4 +150,17 @@
 - **BYOD Security Guidelines**  
 ![BYOD Security Guidelines](/images/mobile_mdm-byod-sec.png)
 
+### <u>Mobile Security Guidelines and Tools</u>
+
+#### **General Guidelines for Mobile Platform Security**
+![General Guidelines for Mobile Platform Security](/images/mobile_mobile-sec1.png)
+![General Guidelines for Mobile Platform Security](/images/mobile_mobile-sec2.png)
+
+#### **Mobile Device Security Guidelines for Administrators**
+![Mobile Device Security Guidelines for Administrators](/images/mobile_mobile-sec3.png)
+
+#### **SMS Phishing Countermeasures**
+![SMS Phishing Countermeasures](/images/mobile_mobile-sec4.png)
+
+
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
