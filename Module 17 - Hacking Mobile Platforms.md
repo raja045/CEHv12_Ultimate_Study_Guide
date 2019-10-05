@@ -131,6 +131,23 @@
 
 - **Mobile Device Management**
   - Over-the-air or wired distribution of applications and configurations
-  - 
+  - Helps implementing enterprise-wide policies
+  - Helps deploy and manage software applications across all enterprise mobile devices
+  - **MDM Solutions**
+    - **IBM MaaS360** - Cloud platform
+    - **XenMobile** - Citrix enterprise MDM
+- **Bring Your Own Device (BYOD)**
+  - Refers to a policy allowing an employee to bring their personal devices
+  - **BYOD Risks**  
+![BYOD Risks](/images/mobile_mdm-byod.png)
+
+- **BYOD Policy Implementation**
+  - Define your requirements
+  - Select device of your choice and build a tech portfolio
+  - Develop policies
+  - Security
+  - Support
+- **BYOD Security Guidelines**  
+![BYOD Security Guidelines](/images/mobile_mdm-byod-sec.png)
 
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
