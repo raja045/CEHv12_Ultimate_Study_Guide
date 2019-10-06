@@ -138,6 +138,12 @@ Important WHOIS Registrars:
 
 **Maltego**: An interactive data mining tool that renders directed graphs for link analysis. The tool is used in online investigations for finding relationships between pieces of information from various sources located on the Internet.
 
+**sc query**: Obtains and displays information about the specified service, driver, type of service, or type of driver.
+
+```
+sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
+```
+ 
 ### <u>Password Cracking Tools</u>
 
 **L0phtCrack**: A password cracking application used for locally or remotely locating user
