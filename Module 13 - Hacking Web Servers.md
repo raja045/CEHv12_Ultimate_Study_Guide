@@ -217,3 +217,5 @@
 
 #### Installation of a patch
 ![Installation of a patch](/images/webserver-patch.png)
+
+### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
