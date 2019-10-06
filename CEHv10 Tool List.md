@@ -6,6 +6,10 @@
 
 **Tcpdump**: A popular CLI sniffer available for both the Unix and Linux platforms.
 
+>tcpdump -i eth0	# Capture on eth0       
+tcpdump -w cap.log # Write to cap.log       
+tcpdump -r cap.log # Read from cap.log
+
 **Windump**: Windows version of tcpdump.
 
 **Cain & Abel**: Its an all-in-one tool to capture packets and record passwords being used in a
@@ -100,6 +104,38 @@ changing connections and can close existing connections.
 **Sysinternals Suite**: A suite of sysinternal tools made by Microsoft for troubleshooting.
 NirSoft Suite: A suite of tools used to automate the troubleshooting of Windows.
 
+**Firewalk**: An active reconnaissance network security tool that attempts to determine what layer 4 protocols a given IP forwarding device will pass. It works by sending out TCP or UDP packets with a TTL one greater than the targeted gateway.
+
+>firewalk -S1-1000 -i eth0 -n -pTCP 192.168.1.254 192.168.1.30 # Scan port 1-1000 through eth0, no hostname resolution, with TCP protocol, via gateway 192.168.1.254 against target 192.168.1.30
+
+**nslookup**: A network administration command-line tool available in many computer operating systems for querying the Domain Name System to obtain domain name or IP address mapping, or other DNS records.
+
+>nslookup       
+>>server ns1.google.com      
+set type=any # Or A (address), NS (nameserver), MX (mailserver), SOA (start of authority), CNAME (canonical name), PTR (pointer)        
+ls -d google.com # Zone transfer
+
+**DIG**: A network administration command-line tool for querying the Domain Name System. dig is useful for network troubleshooting and for educational purposes. It can operate based on command line option and flag arguments, or in batch mode by reading requests from an operating system file.
+
+>dig www.google.com     
+dig mx www.google.com # Get mail server entries     
+dig axfr @ns1.google.com www.google.com # Zone transfer     
+
+**NBTSTAT**: A diagnostic tool for NetBIOS over TCP/IP. It is included in several versions of Microsoft Windows. Its primary design is to help troubleshoot NetBIOS name resolution problems.
+
+>nbtstat -A 192.168.1.254 # Get remote NetBIOS table        
+nbtstat -n # Get local table
+
+**WHOIS**: Searches for an object in a WHOIS database. WHOIS is a query and response protocol that is widely used for querying databases that store the registered users of an Internet resource, such as a domain name or an IP address block, but is also used for a wider range of other information.
+
+>whois google.com       
+Important WHOIS Registrars:     
+**ARIN** - North America        
+**APNIC** - Asia Pacific        
+**AFRINIC** - Africa        
+**LACNIC** - Latin America and Caribbean        
+**RIPE** - Europe       
+
 ### <u>Password Cracking Tools</u>
 
 **L0phtCrack**: A password cracking application used for locally or remotely locating user
@@ -110,6 +146,9 @@ FreeBSD/ etc. Can be used for periodically scanning and cracking system password
 
 **John the Ripper**: CLI password cracking utility that can have custom rules created as well as
 use custom password lists to crack passwords.
+
+>john shadow.txt        
+john --wordlist=passwords.txt shadow.txt
 
 **Trinity Rescue Kit**: Live Linux distribution that aims specifically at recovery and repair
 operations on Windows machines, but is equally usable for Linux recovery issues. Since
