@@ -136,6 +136,8 @@ Important WHOIS Registrars:
 **LACNIC** - Latin America and Caribbean        
 **RIPE** - Europe       
 
+**Maltego**: An interactive data mining tool that renders directed graphs for link analysis. The tool is used in online investigations for finding relationships between pieces of information from various sources located on the Internet.
+
 ### <u>Password Cracking Tools</u>
 
 **L0phtCrack**: A password cracking application used for locally or remotely locating user
