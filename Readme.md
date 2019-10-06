@@ -6,9 +6,11 @@
 [EC-Council Ethical Hacking and Countermeasures Vol 1 and 2](https://store.eccouncil.org/product/cehv10-courseware/)
 
 ## **Contributions**
-CEH All-in-One Exam Guide Notes have been taken from [scottymcraig CEHv10StudyGuide Github](https://github.com/scottymcraig/CEHv10StudyGuide) (Not going to reinvent the wheel)
+CEH All-in-One Exam Guide Notes has been taken from [scottymcraig CEHv10StudyGuide Github](https://github.com/scottymcraig/CEHv10StudyGuide) (Not going to reinvent the wheel)
 
 Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of scottymcraig CEHv10StudyGuide Github](https://github.com/karsyboy/CEHv10StudyGuide)
+
+CEHv10 Tool List has been taken from [Optixal CEHv10-Notes Github](https://github.com/Optixal/CEHv10-Notes) 
 
 # **CEH All-in-One Exam Guide Notes**
 
@@ -53,3 +55,6 @@ Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of s
 #### [Module 16 - Hacking Wireless Networks](Module 16 - Hacking Wireless Networks.md)
 
 #### [Module 17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
+
+# **CEHv10 Tool List**
+#### [Tool List](CEHv10 Tool List.md)
