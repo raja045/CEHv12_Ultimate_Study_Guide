@@ -247,3 +247,82 @@
   - Honeypot based on IDS 
   - Offers common internet services 
 
+### <u>Evading IDS</u>
+
+#### Techniques
+![Firewall Tech](/images/ids-evasion.png)
+
+#### Insertion Attack
+  - Attacker confuses the IDS by forcing it to read invalid packets
+  - An IDS blindly believes and accepts a packet that an end system rejects and the attacker exploits this condition and inserts data into the IDS
+  - Occurs when NIDS is less strict in processing packets than the internal network
+  - The attacker obscures extra traffic and IDS concludes the traffic is harmless
+  - The IDS gets more packets than the destination
+  - IDS and the end system construct two different strings
+![Firewall Tech](/images/ids-insertion.png)
+
+#### Evasion
+  - End System Accepts a packet that an IDS rejects
+  - Using this technique an attacker exploits the host computer without the IDS ever realizing it
+  - Attacker sends portions of the request in packet that the IDS mistakenly rejects allowing the removal of parts of the stream from the IDS
+  - The IDS gets fewer packets than the destination
+#### DoS
+  - IDSs use a centralized server for logging alerts
+  - If attackers know the IP address of the centralized server they can perform a DoS or other hack to slow down or crash the server
+  - As result attacker intrusion attempts will not be logged
+#### Obfuscation
+  - Encode the attack packet payload
+  - Attackers manipulate the path referenced in the signature to fool the HIDS
+  - Attackers can encode attack patterns in Unicode to bypass IDS filtering but be understood by an iis webserver
+  - Polymorphic code is another means to circumvent signature based IDS by creating unique attack patterns 
+  - Use encrypted protocols such as https so the IDS cant read the packet
+#### False Positive Generation
+  - Craft malicious packets just to generate alerts
+  - These packets generate a large number of false positive alerts
+  - False positives are used to hide the real attack traffic
+  - Makes it difficult to differentiate the attack traffic with the false positives
+#### Session Splicing
+  - Attacker splits the attack traffic into many packets
+  - It is effective against IDS that do not reconstruct packets before checking them against intrusion signatures
+  - If attackers are aware of delay in packet reassembly at the IDS the can add delay between packet transmissions to bypass the reassembly
+  - IDS stops reassembly if they do not receive packets within a certain time
+  - IDS will stop working if the target host keeps session active for a time longer than the IDS reassembly time
+  - Any attack attempt after a successful splicing attack will not be logged by the IDS
+#### Unicode Evasion 
+  - Unicode is a character coding system to support worldwide interchange processing and display of the written texts
+  - In the Unicode space all the code points are treated differently but it is possible that there could be multiple representations of a single character
+  - Because of this complexity some IDS handle Unicode improperly
+  - Attacker convert attack string into Unicode to avoid IDS
+#### Fragmentation Attack
+  - Can be used when fragmentation timeouts vary between IDS and host
+  - If a fragment reassembly timeout is 10 sec at the IDS and 20 sec at the target system attackers will send the second fragment after 15 secs
+  - IDS will drop the fragment as the second fragment is received but the target will reassemble the fragment
+  - When and IDS timeout exceeds the Victims timeout multiple fragments can be sent at different times so that the IDS receives some packets and the target receives other
+#### Overlapping Fragments
+  - Generates a series of tiny fragments with overlapping TCP sequence numbers
+#### Time to live 
+  - Attacker needs to have prior knowledge of the topology
+  - This information can be obtained using tools such as traceroute 
+  - IDS will receive both fragments target receives first fragment only
+#### Invalid RST packet
+  - Attacker send RST packet to the IDS with an Invalid checksum
+  - IDS stops processing the packet thinking the TCP communication session has ended
+  - The target checks the RST packet checksum and drops it because it is invalid
+#### Urgency Flag
+  - IDS do not consider the urgent pointer
+  - This results in the IDS and the target systems having different sets of packets
+#### Polymorphic Shellcode
+  - Signature based NIDS identifies an attack by matching attack signatures with incoming and outgoing data
+  - Signatures are based off of commonly used string in shell code
+  - Polymorphic shellcode includes multiple signatures making it difficult to detect the signature
+  - Encode the payload using some technique and then place a decoder before the payload
+  - Shellcode is completely rewritten each time is is sent evading detection
+  - This technique also evades the commonly used shellcode strings 
+#### ASCII Shellcode
+  - ASCII Shellcode can be used to evade IDS because the pattern matching does not work with the ASCII values
+  - Scope of ASCII shellcode is limited as all assembly instructions cannot be converted to ASCII values directly
+  - Can be overcame by using other sets of instructions for converting ASCII values properly
+#### Application Layer Attacks
+  - Uses compression to had malicious code 
+  - Signature IDS cannot detect signature in compressed files
+  - Enables an attacker to exploit the vulnerabilities in compressed data
