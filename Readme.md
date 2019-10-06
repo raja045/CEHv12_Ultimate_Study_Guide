@@ -41,6 +41,11 @@ Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of s
 # **Ethical Hacking and Countermeasures Notes**
 
 #### [Module 11 - Session Hijacking](Module 11 - Session Hijacking.md)
+
 #### [Module 12 - Evading IDS, FIrewalls, and Honeypots](Module 12 - Evading IDS, FIrewalls, and Honeypots.md)
+
+#### [Module 13 - Hacking Web Servers](Module 13 - Hacking Web Servers.md)Module 13 - Hacking Web Servers
+
 #### [Module 16 - Hacking Wireless Networks](Module 16 - Hacking Wireless Networks.md)
+
 #### [Module 17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
