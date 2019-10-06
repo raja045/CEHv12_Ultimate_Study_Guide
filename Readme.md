@@ -46,6 +46,8 @@ Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of s
 
 #### [Module 13 - Hacking Web Servers](Module 13 - Hacking Web Servers.md)
 
+#### [Module 14 - Hacking Web Applications](Module 14 - Hacking Web Applications.md)
+
 #### [Module 16 - Hacking Wireless Networks](Module 16 - Hacking Wireless Networks.md)
 
 #### [Module 17 - Hacking Mobile Platforms](Module 17 - Hacking Mobile Platforms.md)
