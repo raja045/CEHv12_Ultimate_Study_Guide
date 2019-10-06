@@ -83,7 +83,7 @@
       - Faster speed
       - Minimal interference
       - More expensive
-      - Hard to impement and configure an requires more space
+      - Hard to implement and configure an requires more space
     - **Software Firewall**
       - A firewall software program installed on a computer just like normal software
       - Used to filter traffic for individual home users
@@ -164,7 +164,7 @@
   - Only devices running the VPN software can access the VPN
 
 #### Firewall Limitations
-![Firewall Tech](/images/firewall-lim.png)
+![Firewall Limitations](/images/firewall-lim.png)
 
 #### Honeypot
   - Setup to attract and trap people whe attempt to penetrate an organizations network
@@ -224,7 +224,7 @@
   - **Snort Rules Detection Operator and IP Address**
     - Direction operator indicates the direction of interest for the traffic 
     - Traffic can flow in either single or bidirectional    
-    ![Firewall Tech](/images/firewall-snort.png)
+    ![Firewall Snort](/images/firewall-snort.png)
     - Use keyword any to identify any IP address
     - Use CIDR notation 
   - **Snort Rules Port Numbers**
@@ -250,7 +250,7 @@
 ### <u>Evading IDS</u>
 
 #### Techniques
-![Firewall Tech](/images/ids-evasion.png)
+![IDS Evasion](/images/ids-evasion.png)
 
 #### Insertion Attack
   - Attacker confuses the IDS by forcing it to read invalid packets
@@ -259,7 +259,7 @@
   - The attacker obscures extra traffic and IDS concludes the traffic is harmless
   - The IDS gets more packets than the destination
   - IDS and the end system construct two different strings
-![Firewall Tech](/images/ids-insertion.png)
+![IDS Insertion](/images/ids-insertion.png)
 
 #### Evasion
   - End System Accepts a packet that an IDS rejects
@@ -326,3 +326,146 @@
   - Uses compression to had malicious code 
   - Signature IDS cannot detect signature in compressed files
   - Enables an attacker to exploit the vulnerabilities in compressed data
+#### Desynchronization
+  - **Pre Connection SYN**
+    - Initial SYN packet is sent before the real connection
+    - If the SYN packet is received after the TCP control block is opened the IDS resets the appropriate sequence number to match that of the newly received SYN packet
+    - Attackers send fake SYN packets with a completely invalid sequence number to desync the IDS
+    - Stops the IDS from monitoring all legit traffic
+  - **Post Connection SYN**
+    - Attempts to desync the IDS from the actual sequence numbers that the kernel is honoring
+    - Send a post connection SYN packet in the data stream whish have divergent sequence numbers
+    - Target ignores the SYN packet as it references an already established connection
+    - The point of the attack is to get the IDS to resync its notion of the sequence numbers to the new SYN packet
+    - Causes the IDS to ignore legitimate part of the original stream
+    - Once the IDS resyncs a RST packet is sent to close down the connection
+#### Encryption
+  - Encrypted sessions with the victim cant be read by the IDS
+#### Flooding
+  - Attacker sends loads of unnecessary traffic to produce noise
+
+### <u>Evading Firewalls</u>
+
+![Firewall Evade](/images/firewall-evade.png)
+
+#### Firewall Identification
+  - **Port Scanning**
+    - Identifies open ports and services running 
+    - Open ports can be further probed to identify the version of services
+    - Some firewall will uniquely identify themselves with how they respond to simple port scans
+  - **Firewalking**
+    - Uses TTL values to determine gateway ACL filters and map networks by analyzing ip packet responses
+    - Attacker sends TCP or UDP packet to the targeted firewall with aTTL set to on hop greater than the firewall
+    - If the packet makes it through the firewall a TTL exceeded in transit will be returned
+  - **Banner Grabbing**
+    - Banners announce the service that is running on the port
+    - Banner grabbing is a fingerprint method
+    - Main services that send out banners are FTP telnet and web servers
+#### IP Address Spoofing 
+  - IP Address spoofing is a hijack technique in which an attacker masquerades as a trusted host to conceal his identity spoof web sites hijack browsers or gain unauthorized access to a network
+  - Attackers modify the addressing information in the IP packet header and the source address bits field in order to bypass the firewall
+#### Source Routing
+  - Allows the sender of a packer to specify the route the packet takes through the network
+  - As the packet travels through the nodes in the network each router examines the destination IP address and chooses the next hop to direct the packet to the destination
+  - In source routing the sender makes some of these decisions 
+  - Allows the attacker to avoid going through the firewall
+#### Tiny Fragments
+  - Attacker creates tiny packet fragments forcing some of the TCP packet header information into the next fragment
+  - IDS filter rules that specify patterns will not match with the fragmented packets due to broken header information
+  - The attack will succeed if the filtering router examines only the first fragment and allows other fragments to pass through
+  - This attack is used to avoid user defined filtering rules and works when the firewall checks only for the tcp header information
+#### Bypass Blocked Sites using IP address in Place of URL
+  - This method involves typing the IP address directly in browsers address bar in place of typing the blocked website domain name 
+#### Bypass blocked sites using anonymous website surfing 
+  - Uses VPN or proxy to encrypt traffic
+#### Bypassing firewall through ICMP tunneling method
+  - Allows tunneling a backdoor shell in the data portion of ICMP echo packets
+  - The payload portion of an ICMP packet is not examined by many firewalls 
+#### Bypassing firewall through ACK tunneling Method
+  - Tunneling a backdoor application with TCP packets with ACK bit set
+  - ACK bit is used to acknowledge receipt of a packet
+#### Bypassing Firewall through HTTP tunneling Method
+  - HTTP tunneling allow attackers to tunnel data through HTTP packets
+  - HTTP tunneling allow sending traffic for other services like FTP over HTTP or HTTPS
+#### Bypassing firewall through SSH tunneling 
+  - Attackers use openssh to encrypt and tunnel all the traffic from a local machine to a remote machine to avoid detection by perimeter security controls 
+#### Bypassing firewall through external systems
+![Firewall Bypassing Through External Systems](/images/firewall-bypass1.png)
+
+#### Bypassing firewall through MITM attack
+  - Attackers make use of the DNS server and routing techniques to bypass restrictions
+![Firewall Bypassing Through MiTM](/images/firewall-bypass2.png)
+
+#### Bypassing through content
+  - Attacker sends the content containing malicious code to the user and tricks him/her to open it so that the malicious code can be executed
+#### Bypassing Web application firewall (WAF) using XSS attack
+  - XSS attack exploits vulnerabilities that occur while processing input parameters of the end users and the server responses in a web application
+  - Attackers inject malicious HTML code in the victims website to bypass the WAF
+![Firewall Bypassing XSS](/images/firewall-bypass3.png)
+
+### <u>IDS/Firewall Evading Tools</u>
+
+#### Traffic IQ Professional 
+  - Enables security professionals to audit and validate the behavior of security devices by generating the standard application traffic or attack traffic between two virtual machines
+#### Colasoft Packet builder
+  - Network packet crafter 
+  - Used to build all types of custom networks
+
+### <u>Detecting Honeypots</u>
+
+  - Attacker can determine the presence of honeypots by probing the services running on a system
+  - Attackers craft malicious probe packets to scan for services such as HTTPS SMTPS and IMAPS
+  - Ports that show a particular service running but deny a three way handshake connection indicated the presence of a honeypot
+
+#### Detecting and Defeating Honeypots
+  - **Detecting presence of Layer 7 Tar Pits**
+    - Look at the latency of the response from the service
+  - **Detecting presence of layer 4 tar pits**
+    - Analyze the TCP window size where tar pits continuously acknowledge incoming packets even though the TCP window size is reduced to zero
+  - **Detecting presence of layer 2 tar pits**
+    - Look for the response with unique MAC address which act as kind of black hole
+    - Need to be on the same layer 2 network
+  - **Detecting Honeypots running on VMWare**
+    - Look at the IEE standards for the current range of MAC addresses assigned to VMWare Inc
+  - **Detecting presence of Honeyd Honeypot**
+    - Perform time based TCP finger printing methods
+  - **Detecting presence of user mode linux honeypot**
+    - Analyze the files such as /proc/mounts /proc/interrupts and /proc/cmdline
+  - **Detecting presence of Sebek based honeypots**
+    - Sebek logs everything that is accessed via read() before transferring to the network causing congesting effect Analyze congestion in the network layer
+  - **Detecting presence of snort inline honeypot**
+    - Analyze outgoing packets by capturing Snort_inline modified packet through another host system and identifying the packet modification
+  - **Detecting presence of fake AP**
+    - Fake access points only send beacon frames but do not generate any fake traffic on the access points and an attacker can monitor the network traffic and easily notice the presence of fake AP
+  - **Detecting presence of bait and switch honeypots**
+    - Look at specific TCP/IP parameters like round trip time, TTL, and  the TCP timestamp
+#### Send Safe Honeypot Hunter 
+  - Tool designed for checking lists of HTTPS and SOCKS proxies for Honey pots
+
+### <u>IDS Firewall Evasion Countermeasures</u>
+
+#### How to defend Against IDS Evasion
+  - Shutdown switch ports
+  - Perform in depth analysis of ambiguous network traffic 
+  - Use TCP FIN or RST packet to terminate malicious TCP sessions
+  - Look for code other than 0x90 to defend against polymorphic shellcode
+  - Train users to identify attack patterns and regularly update/ patch
+  - Deploy IDS after a through analysis of network topology nature of network traffic and the number of host to monitor 
+  - Use a traffic normalizer to remove potential ambiguity from packet stream before it reaches IDS
+  - Ensure IDS normalize fragmented packets and allows those packets to be reassembled In the proper order
+  - Define DNS server for client resolver in routers or similar network devices
+  - Harden the security of all communication devices such as modems, routers, switches, etc
+  - Block ICMP TTL expired packets
+  - Update antivirus signature regularly 
+  - Use a traffic normalization solution at the IDS to prevent the system against evasion
+  - Store the attack information for future analysis
+
+#### How to defend against firewall evasion
+![Firewall Evasion Countermeasures](/images/firewall-counter1.png)
+
+### <u>Firewall Penetration Testing</u>
+
+#### Firewall IDS Penetration Testing
+  - Helps evaluate ingress and egress traffic filtering capabilities
+
+![Firewall Penetration Testing](/images/firewall-pen.png)
