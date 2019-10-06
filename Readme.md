@@ -44,7 +44,7 @@ Ethical Hacking and Countermeasures Notes added by Karsyboy to [Github Fork of s
 
 #### [Module 12 - Evading IDS, FIrewalls, and Honeypots](Module 12 - Evading IDS, FIrewalls, and Honeypots.md)
 
-#### [Module 13 - Hacking Web Servers](Module 13 - Hacking Web Servers.md)Module 13 - Hacking Web Servers
+#### [Module 13 - Hacking Web Servers](Module 13 - Hacking Web Servers.md)
 
 #### [Module 16 - Hacking Wireless Networks](Module 16 - Hacking Wireless Networks.md)
 
