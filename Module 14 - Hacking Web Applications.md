@@ -1,15 +1,19 @@
 # Hacking Web Applications
 
-### <u>Web App Concepts</u>
+## <u>Web App Concepts</u>
 
  - Provide an interface between the end users and webservers
  - Used to support critical business functions
 
+<img width="775" alt="image" src="https://github.com/user-attachments/assets/b4588943-a79f-4c31-888a-4d9213ba1c4e">
+
+
 #### Web Application Architecture
- - Clients
- - Web Server
- - Business layer
+ - Clients or Application Layer
+ - Business layer: Web Server logic layer and Bussiness logic layer
  - Database layer
+<img width="807" alt="image" src="https://github.com/user-attachments/assets/f1fe19ba-f661-4d7d-993b-e02770f03c1d">
+
 
 #### Web 2.0 Applications
  - Web applications that provide and infrastructure
@@ -17,10 +21,29 @@
 #### Vulnerability Stack
 ![Vulnerability Stack](/images/webapp-vuln_stack.png)
 
-### <u>Web App Threats</u>
-![Web App Threats](/images/webapp-threats.png)
+## <u>Web App Threats</u>
+![OWSAP-10-Blog-Post--OM-Networks](https://github.com/user-attachments/assets/042232bc-dfa3-45f4-9cd8-989647c1f98e)
 
-#### Injection Flaws
+### A01 Broken Access Control
+ - Access control is broken and allows an attacker to act as users or administrators.
+
+#### common vulnerabilities associated with the access control are as follows:
+- Gaining permission to read or modify someone's account through their unique idenitifer.
+- Abusing the Least privileges.
+- Gaining access to the APIs without the access controls for PUT, POST, and DELETE.
+- Escalating privileges, where a user can act as an administrator after logging in. 
+<img width="764" alt="image" src="https://github.com/user-attachments/assets/7614a3b7-6c93-4ae9-8790-3eede684064b">
+
+#### More Resources:
+- https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+- https://portswigger.net/web-security/access-control
+
+
+### A02 Cryptographic Failures / Sensitive Data Exposure
+- Web applications use cryptographic algorithms to encrypt data and other sensitive information that they need to transfer from the server to the client or vice versa. Sensitive data exposure occurs because of flaws such as insecure cryptographic storage and information leakage.
+
+
+### A03 Injection Flaws
  - Allow untrusted data to be interpreted and executed as part of a command or query
  - Done be constructing malicious commands or queries
  - Prevalent in legacy code
@@ -28,12 +51,14 @@
    - SQL Injection
    - Command Injection
    - LDAP Injection
+   - Cross-site Scripting(XSS)
 #### SQL Injection 
  - Series of malicious SQL queries that manipulate the database
  - Allows you to bypass normal security measures and obtain access to the valuable data
  - Can often be executed from the address bar
  - **Example of an SQL injection**
    - Test’) ;DROP TABLE Messages;--
+ <img width="748" alt="image" src="https://github.com/user-attachments/assets/ed26987e-2b05-4dfe-bc07-9d8d7130bc8c">
 
 #### Command Injection 
  - **Shell injection**
@@ -79,8 +104,7 @@
 
 ![Sensitive Data Exposure](/images/webapp-xxe.png)
 
-#### Broken Access Control
- - Access control is broken and allows an attacker to act as users or administrators
+
 #### Security Misconfiguration
  - Can occur on any level of an application stack
  - **Unvalidated Inputs**
