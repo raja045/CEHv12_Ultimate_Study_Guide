@@ -82,30 +82,30 @@
 
 ![Web App LDAP Injection](/images/webapp-ldap1.png) ![Web App LDAP Injection](/images/webapp-ldap2.png)
 
-#### Broken Authentication
- - Uses vulnerbilites in the authentication or session manager functions 
- - **Session ID in URLS**
-   - Attacker sniffs the network traffic and is able to acquire a session ID
- - **Password Exploitation**
-   - Gains access to the web applications password database
- - **Timeout Exploitation**
-   - It the timeouts are not set right and a user does not log out on a public computer the computer and be used to re open that session later
-#### Sensitive Data Exposure
- - Many web applications do not protect their sensitive data properly
- - Application uses poorly written encryption code 
- - Allows an attacker to steal or modify weakly protected sensitive data
+#### Other Injection Attacks
+- Server-side JS Injection
+- Server-side Includes Injection
+- Server-side Template Injection
+- Log Injection
+- HTML Injection
+- CRLF Injection
+- JNDI Injection
 
-![Sensitive Data Exposure](/images/webapp-sensitivedata.png)
+#### Cross-Site Scripting (XSS)
+ - Exploits vulnerabilities in dynamically generated web pages
+ - Allows attackers to inject client side scripts into web pages viewed by other users
+ - Occurs when invalidated input data is included in dynamic content 
+ - Can inject malicious scripts or web content by hiding it within legitimate requests
 
-#### XML External Entity (XXE)
- - Server-side request forgery (SSRF) attack where an application is able to parse XML input from an unreliable source because of the misconfigured XML parser
- - Attacker send malicious XML input containing reference to an external entity to the victim web application
- - Allows attackers to access protected files and services
-
-![Sensitive Data Exposure](/images/webapp-xxe.png)
+ <img width="813" alt="image" src="https://github.com/user-attachments/assets/01dd4911-7fbd-403a-84a9-dd9ac9aa0881">
 
 
-#### Security Misconfiguration
+### A04 Insecure Design
+- Attackers often attempt to exploit poorly implemented APIs, which fail to filter requests properly. They search for weak APIs that are not integrated with security gateways to differentiate malicious inputs. Then, they attach malicious code to a vulnerable API.
+
+<img width="804" alt="image" src="https://github.com/user-attachments/assets/16c2299c-7cb9-4724-809c-f9b7a9c0d127">
+
+### A05 Security Misconfiguration
  - Can occur on any level of an application stack
  - **Unvalidated Inputs**
    - Input from a client is not validated
@@ -115,13 +115,41 @@
    - Gives insight into source code 
  - **Insufficient Transport Layer Protection**
    - Supports weak algorithms and uses expired or invalid certificates
-#### Cross-Site Scripting (XSS)
- - Exploits vulnerabilities in dynamically generated web pages
- - Allows attackers to inject client side scripts into web pages viewed by other users
- - Occurs when invalidated input data is included in dynamic content 
- - Can inject malicious scripts or web content by hiding it within legitimate requests
+ - **Bypassing**
+   - An attacker may bypass the need to choose between two accounts by adding another account in the HTML page source code. The web browser displays       the new combo box, and the attacker can choose the new account.
+     
+### XML External Entity (XXE)
+ - Server-side request forgery (SSRF) attack where an application is able to parse XML input from an unreliable source because of the misconfigured XML parser
+ - Attacker send malicious XML input containing reference to an external entity to the victim web application
+ - Allows attackers to access protected files and services
 
-![Web App XSS](/images/webapp-xss.png)
+![Sensitive Data Exposure](/images/webapp-xxe.png)
+
+### A06 Vulnerable and Outdated Components/Using Components with Known Vulnerabilities
+- attackers tries to find the outdated softwares, and exploit them with know vulnerabilities listed on exploit sites such as Exploit Database (https://www.exploit-db.com), CXSecurity (https://cxsecurity.com), and Zero Day Initiative (https://www.zerodayinitiative.com). 
+
+### A07 – Identification and Authentication Failures/Broken Authentication
+
+ - Uses vulnerbilites in the authentication or session manager functions 
+ - **Session ID in URLS**
+   - Attacker sniffs the network traffic and is able to acquire a session ID
+ - **Password Exploitation**
+   - Gains access to the web applications password database
+ - **Timeout Exploitation**
+   - It the timeouts are not set right and a user does not log out on a public computer the computer and be used to re open that session later.
+     
+#### Sensitive Data Exposure
+ - Many web applications do not protect their sensitive data properly
+ - Application uses poorly written encryption code 
+ - Allows an attacker to steal or modify weakly protected sensitive data
+
+![Sensitive Data Exposure](/images/webapp-sensitivedata.png)
+
+
+
+
+
+
 
 #### Insecure Deserialization
  - Process of liberalizing and demineralizing data objects
