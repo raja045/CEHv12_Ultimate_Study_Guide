@@ -199,26 +199,36 @@
  - Allows attackers to cause denial of service attacks
 #### Hidden Field Manipulation 
 
-### <u>Hacking Methodology</u>
+# Hacking Methodology
 
-#### Footprint Web Infrastructure
+### Footprint Web Infrastructure
  - First step in web application hacking
  - Helps attackers select victims
  - **Server Discovery**
    - Finds servers
+   - Use tools : WHOIS LOOKUP(Netcraft, whois Lookup, smart whois), DNS Interrogation(DNS Recon, DNS).
  - **Service Discovery**
-   - Find ports
-   - Use nmap
+   - Find ports 
+   - Use tools : nmap, NetScanTools Pro, Sandcat Browser.
  - **Server Identification**
    - Banner grabbing
+   - use tools: Telnet, openSSL, ID Serve, Netcraft.
  - **Detecting Web App Firewalls and proxies**
-   - Use tool WAF00F
+   - Use tools :WAF00F, SHIELDFY, WhatWaf, Nmap.
    - Add certain headers in the response header field
    - Use TRACE to find changes the proxy server made to the request
- - **Hidden Content**
-   - Web Spidering 
-   - Attacker Directed Spidering 
+ - **Hidden Content Discovery**
+   - Web Spidering/Crawling
+     - use tools: Burpsuite, ZAP Automated Scan, WebScarab, Mozenda Web Agent Builder, Octoparse, Giant Web Crawl(https://80legs.com)
+   - Attacker Directed Spidering
    - Brute Forcing
+  - **Detect Load Balaners**
+    - use host command
+    - use dig command
+    - use load balancing detecter(LBD)
+    - These are tools which will give you enough idea about the load balancers used for their servers.
+
+Some additional information is provided about the spidering and it's tools below:
 #### Web Spidering Using Burp Suite
  - Make burp suite proxy
  - Spider visits every single link on site
@@ -228,27 +238,51 @@
  - Scan for known vulnerabilities 
  - Launch web server attacks on exploits found
  - Launch DoS attacks
-#### Analyze Web Application
- - **Entry points**
+   
+### Analyze Web Application
+ - **Identify Entry points for User Input**
    - Review HTTP request
    - Determine all user input fields
    - Determine encoding techniques
- - **Server Side Tech**
+ - **Identify Server-Side Technologies**
    - HTTP Fingerprinting
    - Examine Error messages
    - Examine session tokens
+   - Tools: httprint (https://net-square.com), WhatWeb(github.com).
+   - These tools can idenitifes version numbers, email addresses, account IDs, web framework modules, SQL errors, and more.
  - **Server Side Functionality**
    - Applications revealed to the client
    - Examine URLS
+ - **Identify Files and Directories**
+   - GoBuster
+     - gobuster -u <target_URL> -w common.txt -s 200
+   - Nmap
+     - nmap -sV --script=http-enum <target_domain_or_IP_address>
+  - **Identify Web Application Vulnerabilities**
+    - This is the automated scan, which can give you some potential entry points, or something which you can take forward from here.
+    - Vega (https://www.subgraph.com) 
+    - WPScan Vulnerability Database (https://wpscan.com)
+    - Arachni (https://www.arachni-scanner.com)
+    - Appspider (https://www.rapid7.com)
+    - Uniscan (https://sourceforge.net)
+
  - **Map Attack Surface**
    - Identify Various attack surfaces
+     <img width="720" alt="image" src="https://github.com/user-attachments/assets/45c2e59d-fd64-4d16-8f25-048380e8aec5">
+     <img width="740" alt="image" src="https://github.com/user-attachments/assets/43039385-81a4-4112-a8dd-b990078b463e">
 
-![Web Attack Surface](/images/webapp-attacksurf.png)
 
 #### Bypass Client-Side Controls
  - Client side controls restrict user inputs in transmitting data via client components and implementing measures
 #### Attack Authentication Mechanism
  - Exploit design and implementation flaws in web applications
+   #### Bypass Authentication: Bypass SAML-based SSO
+    - SAML is an XML-based infrastructure that serves as an authorization and authentication medium between two peers, such as identity provider (IDP) and service provider.
+      <img width="724" alt="image" src="https://github.com/user-attachments/assets/bc0fed76-05ff-433c-9745-8eb78681ff8c">
+    - Can use the "SAML Raider" extension in the burpsuite to find and tamper the requests.
+
+#### Attack Authorization Schemes
+- In an authorization attack, the attacker first finds a legitimate account with limited privileges, then logs in as that user, and gradually escalates privileges to access protected resources. 
 #### Username Enumeration
  - Uses trail and error method to guess username based off services response to incorrect tries
 
