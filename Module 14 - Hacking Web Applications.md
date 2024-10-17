@@ -286,4 +286,56 @@ Some additional information is provided about the spidering and it's tools below
 #### Username Enumeration
  - Uses trail and error method to guess username based off services response to incorrect tries
 
+### Attack Application Logics
+
+#### Local File Inclusion
+- Local file inclusion (LFI) vulnerability enables attackers to add their own files on a server via a web browser.
+- Example: http://xyz.com/page=../../../../../../etc/passwd
+- Evade added .php :
+- Now, php is appended to the file name, which means the user cannot find the required file because file /etc/passwd.php does not exist. If an attacker tries to insert null bytes (%00) at the end of the attack string,
+- The .php can be easily evaded: http://xyz.com/page=../../../../../../etc/passwd%00
+- Another method to evade the added php is to add a question mark (?) to the attack string:
+- http://xyz.com/page=../../../../../../etc/passwd?
+
+#### Some additional web application hacking tools are listed below: 
+- Metasploit (https://www.metasploit.com)
+- w3af (https://w3af.org)
+- Nikto (https://cirt.net)
+- Sn1per (https://github.com)
+- WSSiP (https://github.com)
+- X Attacker (https://github.com)
+- timing_attack (https://github.com)
+- HTTrack (https://www.httrack.com)
+- SQL Injection Scanner (https://pentest-tools.com)
+- XSS Scanner (https://pentest-tools.com)
+- SQLi Exploiter (https://pentest-tools.com)
+- HTTP Request Logger (https://pentest-tools.com)
+- WebCopier (https://www.maximumsoft.com)
+- WPScan (https://wpscan.com)
+- TIDoS-Framework (https://github.com)
+
+### Web API, Webhooks, and Web Shell
+
+- **REST API vulnerability scanning tools are as follows:**
+- Fuzzapi (https://github.com)
+- w3af (https://w3af.org)
+- appspider (https://www.rapid7.com)
+- Vooki (https://www.vegabird.com)
+- OWASP ZAP (https://www.zaproxy.org)
+
+
+## Web Application Security Testing
+
+#### Manual Web Application security Testing 
+- This involves testing a web application using manually designed data, customized code, and some browser extension tools.
+- Security professionals also use other tools such as:
+  - Selenium,
+  - JMeter,
+  - Loadrunner,
+  - QTP,
+  - Bugzilla, and Test Link to perform manual testing.
+
+
+
+
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
