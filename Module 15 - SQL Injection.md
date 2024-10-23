@@ -27,7 +27,8 @@
      - Inject additional malicious queries into the original query
  - **Error Based SQL Injection**
    - Forces the database to perform some operation which the result will be an error
- - **Blind/Inferential SQL Injection**
+ 
+ #### Blind/Inferential SQL Injection
    - No Error Message
    - Generic Page page is shown instead of a error page 
    - Time-intensive
@@ -39,6 +40,7 @@
      - Perform time delayed SQL injection attacks without using the time delay functions
      - Heavy queries retrieve lots of data and take a huge amount of time to execute on the database engine
      - Uses multiple joins to make a heavy query
+     
 #### Out of band SQL Injection
  - Attackers use different communication channels to perform the attack and gain the results
  - Uses DNS and HTTP request to get information
@@ -60,5 +62,11 @@
    - Used to discover coding errors inputting massive amount of random data and observing the changes in the output
  - Static/Dynamic Testing
    - Analysis of the web application source code
+  
+  ## Understanding HTTP-POST Method
+  - An HTTP POST request is a method for carrying the requested data to the web server.
+  - Unlike the HTTP GET method, the HTTP POST request carries the requested data as a part of the message body.
+  - Thus, it is considered more secure than HTTP GET. HTTP POST requests can also pass large amounts of data to the server.
+  - They are ideal for communicating with an XML web service.
 
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
