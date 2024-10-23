@@ -334,6 +334,24 @@ Some additional information is provided about the spidering and it's tools below
   - Loadrunner,
   - QTP,
   - Bugzilla, and Test Link to perform manual testing.
+ 
+## Web Application Security Testing Tools:
+- Acunetix Vulnerability Scanner, Source: https://www.acunetix.com
+- N-Stalker Web App Security Scanner, Source: https://www.nstalker.com
+- Browser Exploitation Framework (BeEF), Source: http://beefproject.com
+Some additional web application security testing tools are as follows: ▪ Metasploit (https://www.metasploit.com) ▪ PowerSploit (https://github.com) ▪ Watcher (https://www.casaba.com) ▪ Invicti (https://www.invicti.com) ▪ Arachni (https://www.arachni-scanner.com)
+
+
+## Web Application Firewalls:
+- dotDefender Source: http://www.applicure.com
+- HCL AppScan® Standard (https://www.hcltechsw.com)
+- Alteon Integrated WAF (AppWall) (https://www.radware.com)
+- Qualys WAF (https://www.qualys.com)
+- Barracuda Web Application Firewall (https://www.barracuda.com)
+- ThreatSentry (https://www.privacyware.com)
+
+
+
 
 
 
