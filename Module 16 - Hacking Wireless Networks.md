@@ -32,7 +32,36 @@
 ![image](https://github.com/user-attachments/assets/096506d9-f323-478a-9351-a16cc954496f)
 
 
+### Wroking of WAP and WAP2 
+![image](https://github.com/user-attachments/assets/086a3f73-234b-4bca-9e74-52c098ca277f)
 
+The three phases of WAP/WAP2 are as follows:
+- **Discovery:** Three messages are sent during the discovery phase. The STA advertises security capabilities and negotiates cipher suites with the AP.
+- **Authentication:** In the authentication phase, the STA and AP agree on the master key (MK) and derive the pairwise master key (PMK) based on the MK. In the PSK mode, the MK is obtained from the pre-shared password, but in the enterprise model, the MK is created by the AS and securely provided to the AP and STA through RADIUS and 802.1X, respectively.
+- **Key management:** Using the four-way handshake, both parties generate the pairwise temporal key (PTK) and confirm possession of the same PTK. The PTK is unique in each association since it is derived from the PMK and two random numbers are picked by each side for a particular association.
+
+### Working of WPA3
+The WPA3 have these four phases:
+1. **Authentication process**: A variety of Extensible Authentication Protocol (EAP) mechanisms are used.
+
+2. **Authenticated encryption process**: Advanced Encryption of at least 128 bits Standard Counter Mode with Cipher Block Chaining Message Authentication (AES-CCMP 128)
+
+3. **Key derivation and confirmation process**: Hashed Message Authentication Mode (HMAC) of at least 256 bits using Secure Hash Algorithm (HMAC-SHA256)
+
+4. **Robust management frame protection process**: Broadcast/Multicast Integrity Protocol Cipher-based Message Authentication Code of at least 128 bits (BIP-CMAC-128)
+
+### Comparison of WEP, WPA, WPA2 and WPA3
+![image](https://github.com/user-attachments/assets/7be33f66-7cd6-4729-8abf-d3103ba15810)
+
+## Wireless Threats
+### Access control Attacks:
+- WarDriving : Detecting the publicliy available WIFI connections.
+- Roque Access Point: This is the fake access point created by hacker in any organization without knowing to them.
+- MAC spoofing
+- AP misconfiguration
+
+
+### 
 
 ## Abbrevations:
 - GSM - Global System for Mobile Communications (GSM)
