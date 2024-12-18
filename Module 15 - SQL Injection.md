@@ -19,13 +19,16 @@
      - Use the UNION command to add a malicious query to the requested query
    - **Tautology**
      - Inject statements that are always true
+     - Used for bypassing the authentication.
    - **End  of line comment**
-     - Adds end of line comment to nullify  legitimate  code --
+     - Adds end of line comment to nullify  legitimate  code 
+     - Comments in a line of code are often denoted by (--), and they are ignored by the query. 
    - **Inline comment**
-     - Use inline comments to add multiple queries
+     - Use inline comments to add multiple queries.
    - **Piggybacked query**
      - Inject additional malicious queries into the original query
- - **Error Based SQL Injection**
+     - Owing to piggybacking, the DBMS receives multiple SQL queries. Attackers use a **semicolon (;)** as a query delimiter to separate the queries. After executing          the original query, the DBMS recognizes the delimiter and then executes the next query.
+   - **Error Based SQL Injection**
    - Forces the database to perform some operation which the result will be an error
  
  #### Blind/Inferential SQL Injection
