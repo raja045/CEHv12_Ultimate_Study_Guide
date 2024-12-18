@@ -58,13 +58,17 @@
 
   - **Firewall Architecture**
     - **Bastion Host**
-      - Designed and configure to protect network resources from attacks
-      - Has two interfaces public or private
+      - A bastion host is a computer system designed and configured to protect network resources from attacks.
+      - Has two interfaces public or private.
+  - <img width="530" alt="image" src="https://github.com/user-attachments/assets/4861a0dd-b532-4c31-9509-348efe519bf8" />
+
     - **Screened subnet**
       - DMZ 
       - Contains hosts that offer public services
       - Responds to public requests and has no hosts accessed by private network
       - Private zone cannot be accessed by internet users
+      - <img width="523" alt="image" src="https://github.com/user-attachments/assets/93e13525-c98c-41a7-ace3-8b193aa0986b" />
+
     - **Multi-homed firewall**
       - Firewall has two or more interfaces that allows further subdivision 
       - Specific security objectives
@@ -73,11 +77,13 @@
     - DMZ is a network that serves as a buffer between the internal secure network and insecure internet
     - Created using a firewall with three or more network interfaces
     - Is an untrusted network were servers that are access by the public and be connected to by host on the internet
+    - **Example Configuration of DMZ**,  Any service such as _email, web, or FTP_ that provides access to external users can be placed in the DMZ. However, web servers that communicate with database servers cannot reside in the DMZ, as they could give outside users direct access to sensitive information. 
+      <img width="728" alt="image" src="https://github.com/user-attachments/assets/10a5a5b7-310e-46e4-b750-a9a49d5c256a" />
 
   - **Types of firewalls**
     - **Hardware firewall**
       - A dedicated stand alone device 
-      - Filters network traffic using packet filtering
+      - Filters network traffic using **packet filtering**
       - Used to filter out the network traffic of large business networks
       - Has increased level of security controls
       - Faster speed
@@ -85,8 +91,8 @@
       - More expensive
       - Hard to implement and configure an requires more space
     - **Software Firewall**
-      - A firewall software program installed on a computer just like normal software
-      - Used to filter traffic for individual home users
+      - A firewall software program installed on a computer just like a **normal software**
+      - Used to filter traffic for **individual home users**
       - Only filters traffic for the computer on which it is installed
       - Less expensive than hardware firewalls
       - Ideal for personal or home use
@@ -105,7 +111,7 @@
     - Rules can included source and destination ip address, the source and the destination port number, the protocol used, TCP flag bits, direction, or interface
 
   - **Circuit-Level Gateway firewall**
-    - Session layer firewall / TCP layer
+    - *Session layer firewall / TCP layer*
     - Information passed to a remote computer through a circuit level gateway appears to have originated from the gateway
     - They monitor requests to create sessions and then determine if those sessions are allowed
     - Circuit proxy firewalls allow or prevent data streams
