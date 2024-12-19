@@ -56,7 +56,22 @@ Can be controlled over HTTP, HTTPS, IRC, or ICQ
   - The attacker sends a large number of SYN requests to the target server (victim) with fake source IP addresses. The attack creates incomplete TCP connections that use up network resources.
   - The host keeps track of partially open connections while waiting for response ACK packets in a listening queue.
 - **SYN-ACK Attack:**  The attacker exploits the second stage of a three-way handshake by sending a large number of SYN-ACK packets to the target machine to exhaust its resources.
-  
+- **Fragmentation Attack:** This attack will destroy a victim's ability to reassemble fragmented packets by flooding it with TCP or UDP packets.
+- **Spoofed Session Flood Attack:**
+- Attackers create fake or spoofed TCP sessions by carrying multiple SYN, ACK, and RST or FIN packets.
+- Attackers employ this attack to bypass firewalls and perform DDoS attacks against target networks, exhausting their network resources. 
+- **HTTP GET/POST Attack:**
+- <img width="514" alt="image" src="https://github.com/user-attachments/assets/30a1a4d9-2ca1-4c70-a3db-c7c403052279" />
+- **Slowloris Attack:**
+- Slowloris is a DDos Attack Tool.
+- The attacker sends partial HTTP requests to the target web server or application.
+- Upon receiving the partial requests, the target server opens multiple connections and waits for the requests to complete.
+- However, these requests remain incomplete, causing the target server’s maximum concurrent connection pool to be filled up and additional connection attempts to be denied.
+- <img width="591" alt="image" src="https://github.com/user-attachments/assets/38229542-b2d1-4622-80d8-faf4785a27dc" />
+
+
+
+To be continued....
 
 
 
