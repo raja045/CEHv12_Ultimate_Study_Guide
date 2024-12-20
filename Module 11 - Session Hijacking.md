@@ -138,6 +138,7 @@
 
 - **UDP Hijacking**
   - Sends forged replies to the victim before the server does
+  - UDP does not use the packet sequencing or synchronizing, As the UDP is connectionless.
 
 - **MiTM attack using ICMP and Arp Spoofing**
   - Packet sniffer used as an interface between the client and the server
