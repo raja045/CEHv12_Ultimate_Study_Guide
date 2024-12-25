@@ -5,30 +5,16 @@
 - **Cryptography** - science or study of protecting information whether in transit or at rest
   - Renders the information unusable to anyone who can't decrypt it
   - Takes plain text, applies cryptographic method, turn it into cipher text
-- **Crypanalysis** - study and methods used to crack cipher text
-- **Linear Cryptanalysis** - works best on block ciphers
-- **Differential Cryptanalysis** - applies to symmetric key algorithms
-  - Compares differences in the inputs to how each one affects the outcome
-- **Integral cryptanalysis** - input vs output comparison same as differential; however, runs multiple computations of the same block size input
-- Plain text doesn't necessarily mean ASCII format - it simply means unencrypted data
-- **Nonrepudiation** - means by which a recipient can ensure the identity of the sender and neither party can deny sending
-
-### <u>Encryption Algorithms and Techniques</u>
-
-- **Algorithm** - step-by-step method of solving a problem
-- **Two General Forms of Cryptography**
-  - **Substitution** - bits are replaced by other bits
-  - **Transposition** - doesn't replace;  simply changes order
-- **Encryption Algorithms** - methmatical formulas used to encrypt and decrypt data
-- **Steam Cipher** - readable bits are encrypted one at a time in a continuous stream
-  - Usually done by an XOR operation
-  - Work at a high rate of speed
-- **Block Cipher** - data bits are split up into blocks and fed into the cipher
-  - Each block of data (usually 64 bits) encrypted with key and algorithm
-  - Are simpler and slower than stream ciphers
-- **XOR** - exclusive or; if inputs are the same (0,0 or 1,1), function returns 0; if inputs are not the same (0,1 or 1,0), function returns 1
-- Key chosen for cipher must have a length larger than the data; if not, it is vulnerable to frequency attacks
-
+ 
+- **Objectives of Cryptography**
+  - **confidentiality**: Information is accessible to only authorised people.
+  - **Integrity**: Preventing unauthorised modification
+  - **Authentication**: 
+  - **Nonrepudiation**: Guarantee that the sender of a message cannot later deny having sent the message and that the recipient cannot deny having received the message.
+    
+- **Types of Cryptography**
+  - **Symmetric Encryption**
+  - **Asymmetric Encryption**
 ### <u>Symmetric Encryption</u>
 
 - **Symmetric Encryption** - known as single key or shared key
@@ -37,6 +23,7 @@
   - Suitable for large amounts of data
   - Harder for groups of people because more keys are needed as group increases
   - Does nothing for nonrepudiation; only performs confidentiality
+
 - **Algorithms**
   - **DES** - block cipher; 56 bit key; quickly outdated and now considered not very secure
   - **3DES** - block cipher; 168 bit key; more effective than DES but much slower
@@ -60,6 +47,32 @@
   - **RSA** - achieves strong encryption through the use of two large prime numbers; factoring thse create key sizes up to 4096 bits; modern de facto standard
 - Only downside is it's slower than symmetric especially on bulk encryption and processing power
 
+    
+- **Crypanalysis** - study and methods used to crack cipher text
+- **Linear Cryptanalysis** - works best on block ciphers
+- **Differential Cryptanalysis** - applies to symmetric key algorithms
+  - Compares differences in the inputs to how each one affects the outcome
+- **Integral cryptanalysis** - input vs output comparison same as differential; however, runs multiple computations of the same block size input
+- Plain text doesn't necessarily mean ASCII format - it simply means unencrypted data
+ 
+### <u>Encryption Algorithms and Techniques</u>
+
+- **Algorithm** - step-by-step method of solving a problem
+- **Two General Forms of Cryptography**
+  - **Substitution** - bits are replaced by other bits
+  - **Transposition** - doesn't replace;  simply changes order
+- **Encryption Algorithms** - methmatical formulas used to encrypt and decrypt data
+- **Steam Cipher** - readable bits are encrypted one at a time in a continuous stream
+  - Usually done by an XOR operation
+  - Work at a high rate of speed
+- **Block Cipher** - data bits are split up into blocks and fed into the cipher
+  - Each block of data (usually 64 bits) encrypted with key and algorithm
+  - Are simpler and slower than stream ciphers
+- **XOR** - exclusive or; if inputs are the same (0,0 or 1,1), function returns 0; if inputs are not the same (0,1 or 1,0), function returns 1
+- Key chosen for cipher must have a length larger than the data; if not, it is vulnerable to frequency attacks
+
+
+
 ### <u>Hash Algorithms</u>
 
 - **Hash** - one-way mathematical function that produces a fix-length string (hash) based on the arrangement of data bits in the input
@@ -81,6 +94,10 @@
   - HashCalc
   - MD5 Calculator
   - HashMyFiles
+
+### Other Encryption Techniques 
+-  **Elliptic Curve Cryptography (ECC):**
+  - 
 
 ### <u>Steganography</u>
 
