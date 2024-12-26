@@ -15,6 +15,7 @@
 - **Types of Cryptography**
   - **Symmetric Encryption**
   - **Asymmetric Encryption**
+
 ### <u>Symmetric Encryption</u>
 
 - **Symmetric Encryption** - known as single key or shared key
@@ -54,7 +55,28 @@
   - Compares differences in the inputs to how each one affects the outcome
 - **Integral cryptanalysis** - input vs output comparison same as differential; however, runs multiple computations of the same block size input
 - Plain text doesn't necessarily mean ASCII format - it simply means unencrypted data
- 
+
+### Other Encryption Techniques 
+-  **Elliptic Curve Cryptography (ECC):**
+   - ECC is a modern public-key cryptography developed to avoid larger cryptographic key usage.
+   - Asymmetric cryptosystem depends on number theory and mathematical elliptic curves (algebraic structure) to generate short, quick, and robust cryptographic keys.
+   - <img width="299" alt="Screenshot 2024-12-26 at 1 03 58 PM" src="https://github.com/user-attachments/assets/953974bb-f869-4500-81e9-3c5364783dac" />
+   - While RSA uses key size of 1024 to encrypt the data. ECC provides the equal security with the key size of 160.
+
+- **Quantum Cryptography:**
+  - Quantum Crypptography has been introduced to protect data from midway attacks(eg., MITM).
+  - This cryptography is processed based on quantum mechanics, such as quantum key distribution (QKD),using photons instead of mathematics as a part of encryption. 
+
+ - **Homomorphic Encryption:**
+   - The keyholder can generate the ciphertext and anyone can alter the ciphertext, but only the keyholder again can decrypt the data.
+   - Homomorphic Cryptography allows computations on encrypted data without revealing the underlying plaintext, making it ideal for secure computation in untrusted environments like cloud services.
+
+- **Hardware Based Encryption:**
+  - workload is transferred to the hardware processors, making the system resources free for performing other functions.
+  - These devices can also store encryption keys and other sensitive information in secured areas of RAM or other nonvolatile storage devices such as flash memory. 
+     
+
+---
 ### <u>Encryption Algorithms and Techniques</u>
 
 - **Algorithm** - step-by-step method of solving a problem
@@ -72,7 +94,7 @@
 - Key chosen for cipher must have a length larger than the data; if not, it is vulnerable to frequency attacks
 
 
-
+--- 
 ### <u>Hash Algorithms</u>
 
 - **Hash** - one-way mathematical function that produces a fix-length string (hash) based on the arrangement of data bits in the input
@@ -95,10 +117,7 @@
   - MD5 Calculator
   - HashMyFiles
 
-### Other Encryption Techniques 
--  **Elliptic Curve Cryptography (ECC):**
-  - 
-
+--- 
 ### <u>Steganography</u>
 
 - **Steganography** - practice of concealing a message inside another medium so that only the sender and recipient know of it's existence
@@ -129,6 +148,7 @@
 - **Single-authority system** - CA at the top
 - **Hierarchial trust system** - CA at the top (root CA); makes use of one or more RAs (subordinate CAs) underneath it to issue and manage certificates
 
+---
 ### <u>Digital Certificates</u>
 
 - **Certificate** - electronic file that is used to verify a user's identity; provides nonrepudiation
@@ -184,12 +204,13 @@
   - Uses flaws in SSL v2
   - Not only web servers; can be IMAP and POP servers as well
 
+--- 
 ### <u>Cryptography Attacks</u>
 
 - **Known plain-text attack** - has both plain text and cipher-text; plain-text scanned for repeatable sequences which is compared to cipher text
 - **Chosen plain-text attack** - attacker encrypts multiple plain-text copies in order to gain the key
 - **Adaptive chosen plain-text attack** - attacker makes a series of interactive queries choosing subsequent plaintexts based on the information from the previous encryptions; idea is to glean more and more information about the full target cipher text and key
-- **Cipher-text-only attack** - gains copies of several encrypted messages with the same algorithm; statistical analysis is then used to reveal eventually repeating code
+- **Cipher-text-only attack** - gains copies of several encrypted messages with the same algorithm; statistical analysis is then used to reveal eventually repeating code.
 - **Replay attack**
   - Usually performed within context of MITM attack
   - Hacker repeats a portion of cryptographic exchange in hopes of fooling the system to setup a communications channel
