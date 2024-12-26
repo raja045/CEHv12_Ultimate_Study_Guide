@@ -73,9 +73,12 @@
 
 - **Hardware Based Encryption:**
   - workload is transferred to the hardware processors, making the system resources free for performing other functions.
-  - These devices can also store encryption keys and other sensitive information in secured areas of RAM or other nonvolatile storage devices such as flash memory. 
-     
-
+  - These devices can also store encryption keys and other sensitive information in secured areas of RAM or other nonvolatile storage devices such as flash memory.
+    
+- **Post quantum Cryptography:**
+  - also known as quantum resistant and quantum proof cryptography.
+  - 
+   
 ---
 ### <u>Encryption Algorithms and Techniques</u>
 
