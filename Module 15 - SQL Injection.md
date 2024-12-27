@@ -44,7 +44,7 @@
      - Heavy queries retrieve lots of data and take a huge amount of time to execute on the database engine
      - Uses multiple joins to make a heavy query
      
-#### Out of band SQL Injection
+#### Out of band SQL Injection ( DMS-Specific
  - Attackers use different communication channels to perform the attack and gain the results
  - Uses DNS and HTTP request to get information
 
