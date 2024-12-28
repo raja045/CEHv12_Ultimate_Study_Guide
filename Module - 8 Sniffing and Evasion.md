@@ -2,8 +2,38 @@
 
 ### <u>Basic Knowledge</u>
 
- - Sniffing is capturing packets as they pass on the wire to review for interesting information
- - **MAC**  (Media Access Control) - physical or burned-in address - assigned to NIC for communications at the Data Link layer
+- **Network Sniffing**
+  - Packet Sniffing is the process of monitoring or capturing all the data packets passing through a given network using software or hardware device.
+  - A packet sniffing program (also known as a sniffer) can capture data packets only from within a given subnet,
+    
+- **How Network Sniffing Works?**
+  - Sniffer turns the NIC of a system to promiscuous mode, which will let you listen all the traffic passing through it.
+  - **Shared Ethernet**
+    - Here message will be broadcasted. So, attacker machine has to respond to the message even though mac address does not match with it' own mac address.
+  - **Switched Ethernet**
+    - Switch is used instead of Hub.
+    - Here Switch maintains a table of mac addresses. So, it will not broadcast the messages. It is not possible to sniff the network the above way.
+    - "_Switch is secure than hub But it is possible to sniff the network in switch_"
+    - How? **ARP Spoofing**: Switch maintains a table of mac address which is called ARP Table / cache.
+    - ARP is stateless and a machine can send an ARP reply even without asking for it;
+    - We can manipulate the ARP table / cache, it will led to network sniff.
+    - **Mac Flooding** : The Switch will have very limited space to store the mac addresses, If attacker can fill it up with fake addresses.
+    - Once the space is full, it will behave like a hub.
+    - It's easy to sniff network in a hub.
+
+### Types of Network Sniffing
+- **Passive Sniffing**
+- Passive Sniffing refers to sniffing through hub.
+- Hub is outdated approach, Most modern networks use switch.
+- **Active Sniffing**
+- It is used to sniff the switch-based Network
+- It involves injecting Address Resolution Packets into the network to flood the Switch's _Content Addressable Memory(CAM)_ table.
+
+### Protocols Vulnerable to Sniffing
+<img width="735" alt="image" src="https://github.com/user-attachments/assets/14c492c7-01d5-4baf-8fb3-6f05ecebc1d9" />
+
+  
+-  **MAC**  (Media Access Control) - physical or burned-in address - assigned to NIC for communications at the Data Link layer
     - 48 bits long
     - Displayed as 12 hex characters separated by colons
     - First half of address is the **organizationally unique identifier** - identifies manufacurer
