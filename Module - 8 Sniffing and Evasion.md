@@ -32,20 +32,6 @@
 ### Protocols Vulnerable to Sniffing
 <img width="735" alt="image" src="https://github.com/user-attachments/assets/14c492c7-01d5-4baf-8fb3-6f05ecebc1d9" />
 
-  
--  **MAC**  (Media Access Control) - physical or burned-in address - assigned to NIC for communications at the Data Link layer
-    - 48 bits long
-    - Displayed as 12 hex characters separated by colons
-    - First half of address is the **organizationally unique identifier** - identifies manufacurer
-    - Second half ensures no two cards on a subnet will have the same address
- - NICs normally only process signals meant for it
- - **Promiscuous mode** - NIC must be in this setting to look at all frames passing on the wire
- - **CSMA/CD** - Carrier Sense Multiple Access/Collision Detection - used over Ethernet to decide who can talk
- - **Collision Domains**
-    - Traffic from your NIC (regardless of mode) can only be seen within the same collision domain
-    - Hubs by default have one collision domain
-    - Switches have a collision domain for each port
-
 ### <u>Protocols Susceptible</u>
 
 - SMTP is sent in plain text and is viewable over the wire.  SMTP v3 limits the information you can get, but you can still see it.
@@ -55,19 +41,14 @@
 - TCP shows sequence numbers (usable in session hijacking)
 - TCP and UCP show open ports
 - IP shows source and destination addresses
+---
 
-### <u>ARP</u>
+## Sniffing in Data Link Layer of the OSI Model
+- In this layer, data packets are encoded and decoded into bits.
+- Sniffers operate at the data link layer and can capture the packets from this layer.
 
-- Stands for Address Resolution Protocol
-- Resolves IP address to a MAC address
-- Packets are ARP_REQUEST and ARP_REPLY
-- Each computer maintains it's own ARP cache, which can be poisoned
-- **Commands**
-  - arp -a - displays current ARP cache
-  - arp -d * - clears ARP cache
-- Works on a broadcast basis - both requests and replies are broadcast to everyone
-- **Gratuitous ARP** - special packet to update ARP cache even without a request
-  - This is used to poison cache on other machines
+---
+
 
 ### <u>IPv6</u>
 
@@ -91,12 +72,26 @@
 
 - Scope applies for multicast and anycast
 - Traditional network scanning is **computationally less feasible**
+  
+### <u>ARP</u>
+
+- Stands for Address Resolution Protocol
+- Resolves IP address to a MAC address
+- Packets are ARP_REQUEST and ARP_REPLY
+- Each computer maintains it's own ARP cache, which can be poisoned
+- **Commands**
+  - arp -a - displays current ARP cache
+  - arp -d * - clears ARP cache
+- Works on a broadcast basis - both requests and replies are broadcast to everyone
+- **Gratuitous ARP** - special packet to update ARP cache even without a request
+  - This is used to poison cache on other machines
+
 
 ### <u>Wiretapping</u>
 
 - **Lawful interception** - legally intercepting communications between two parties
-- **Active** - interjecting something into the communication
-- **Passive** - only monitors and records the data
+- **Active** - interjecting something into the communication. e.g., MITM
+- **Passive** - only monitors and records the data. e.g., snooping or eavesdropping
 - **PRISM** - system used by NSA to wiretap external data coming into US
 
 ### <u>Active and Passive Sniffing</u>
@@ -109,18 +104,66 @@
 - **Network tap** - special port on a switch that allows the connected device to see all traffic
 - **Port mirroring** - another word for span port
 
-### <u>MAC Flooding</u>
+## Sniffing Technique: MAC Attacks
 
-- Switches either flood or forward data
-- If a switch doesn't know what MAC address is on a port, it will flood the data until it finds out
-- **CAM Table** - the table on a switch that stores which MAC address is on which port
-  - If table is empty or full, everything is sent  to all ports
+### **MAC  (Media Access Control)** 
+- physical or burned-in address - assigned to NIC for communications at the Data Link layer
+- 48 bits long
+- Displayed as 12 hex characters separated by colons
+- First half of address is the **organizationally unique identifier** - identifies manufacurer
+- Second half ensures no two cards on a subnet will have the same address
+- NICs normally only process signals meant for it
+- **Promiscuous mode** - NIC must be in this setting to look at all frames passing on the wire
+- **CSMA/CD** - Carrier Sense Multiple Access/Collision Detection - used over Ethernet to decide who can talk
+- **Collision Domains**
+  - Traffic from your NIC (regardless of mode) can only be seen within the same collision domain
+  - Hubs by default have one collision domain
+  - Switches have a collision domain for each port
+ 
+### CAM Table
+- The table on a switch that stores which MAC address is on which port
+- If table is empty or full, everything is sent  to all ports
 - This works by sending so many MAC addresses to the CAM table that it can't keep up
+- If a CAM Table is full, then switch will start behave like a hub.
+  
+### <u>MAC Flooding</u>
+- Filling the CAM Table with fake make addresses can be called as Mac Flooding.
+- Switches either flood or forward data
+- If a switch doesn't know what MAC address is on a port, it will flood the data until it finds out.
 - **Tools**
   - Etherflood
   - Macof
 - **Switch port stealing** - tries to update information regarding a specific port in a race condition
 - MAC Flooding will often destroy the switch before you get anything useful, doesn't last long and it will get you noticed.  Also, most modern switches protect against this.
+
+## Sniffing Technique: DHCP Attacks
+
+### Working of DHCP
+<img width="817" alt="image" src="https://github.com/user-attachments/assets/1080baf6-f167-4584-8c4f-bbb3ec497088" />
+
+
+### <u>DHCP Starvation Attack</u>
+
+- Attempt to exhaust all available addresses from the server
+- Attacker sends so many requests that the address space allocated is exhausted
+- DHCPv4 packets - DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK
+- DHCPv6 packets - Solicit, Advertise, Request (Confirm/Renew), Reply
+- **DHCP Steps**
+  1. Client sends DHCPDISCOVER
+  2. Server responds with DHCPOFFER
+  3. Client sends request for IP with DHCPREQUEST
+  4. Server sends address and config via DHCPACK
+- **Tools**
+  - Yersinia
+  - DHCPstarv
+- Mitigation is to configure DHCP snooping
+
+### Rogue DHCP Server Attack
+- setup a fake server which is not in control of network administrator
+- to offer IP addresses instead of real server.
+- This attack can take advantage of the DHCP starvation attack and make it more sophisiticated.
+  
+##Sniffing Technique: ARP Attacks
 
 ### <u>ARP Poisioning</u>
 
@@ -137,22 +180,6 @@
   - Ufasoft
   - dsniff
 
-### <u>DHCP Starvation</u>
-
-- Attempt to exhaust all available addresses from the server
-- Attacker sends so many requests that the address space allocated is exhausted
-- DHCPv4 packets - DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK
-- DHCPv6 packets - Solicit, Advertise, Request (Confirm/Renew), Reply
-- **DHCP Steps**
-  1. Client sends DHCPDISCOVER
-  2. Server responds with DHCPOFFER
-  3. Client sends request for IP with DHCPREQUEST
-  4. Server sends address and config via DHCPACK
-- **Tools**
-  - Yersinia
-  - DHCPstarv
-- Mitigation is to configure DHCP snooping
-- **Rogue DHCP Server** - setup to offer addresses instead of real server.  Can be combined with starvation to real server.
 
 ### <u>Spoofing</u>
 
