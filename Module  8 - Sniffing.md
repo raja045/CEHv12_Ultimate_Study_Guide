@@ -1,6 +1,4 @@
-# Sniffing and Evasion
-
-### <u>Basic Knowledge</u>
+# Sniffing 
 
 - **Network Sniffing**
   - Packet Sniffing is the process of monitoring or capturing all the data packets passing through a given network using software or hardware device.
