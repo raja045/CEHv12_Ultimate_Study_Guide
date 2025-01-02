@@ -73,4 +73,18 @@ The WPA3 have these four phases:
 - FHSS - Frequency-hopping spread spectrum
 
 
+## Bluetooth Hacking
+
+- **Bluesmacking**:
+  -  A Bluesmacking attack occurs when an attacker sends an oversized ping packet to a victim's device, causing a buffer overflow.
+  -  This is similar to ping-of-death ICMP attack.
+- **Bluejacking**: Sending a message to the victim using bluetooth without his/her constent.
+- **Bluesnarfing**: Bluesnarfing is a method of gaining access to sensitive data in a Bluetooth-enabled device.
+- **Bluesniff**: (operates in Linux)
+  - Bluesniff is a proof-of-concept code for bluetooth war driving utility.
+  - useful for finding hidden and discoverable bluetooth devices.
+-  **Bluebugging**:
+  - In this attack, attacker gains remote access to a target bluetooth enabled device without the victim's awareness.
+- 
+
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
