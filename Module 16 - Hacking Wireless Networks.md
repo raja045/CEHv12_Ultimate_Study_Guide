@@ -59,6 +59,14 @@ The WPA3 have these four phases:
 - Roque Access Point: This is the fake access point created by hacker in any organization without knowing to them.
 - MAC spoofing
 - AP misconfiguration
+- Ad hoc associations
+- Promiscuous client
+- Client Mis-association
+- Unauthorised association
+
+### Integrity Attacks:
+
+
 
 
 ### 
@@ -85,6 +93,19 @@ The WPA3 have these four phases:
   - useful for finding hidden and discoverable bluetooth devices.
 -  **Bluebugging**:
   - In this attack, attacker gains remote access to a target bluetooth enabled device without the victim's awareness.
+- **BluePrinting**:
+  - It's a foot printing technique performed by an attacker to determine the make and model of the target bluetooth device.
+- **Btlejacking**:
+  - This is detrimental to Bluetooth low energy (BLE) devices.
+  - The attacker can sniff, jam and take control of the data transmission between BLE devices by performing an MITM attack.
+  - Succesful attempt, will bypass the security mechanisms and listen to the information being shared.
+- **KNOB Attack**:
+  - A Key Negotiation of Bluetooth (KNOB) attack enables an attacker to breach Bluetooth security mechanisms and perform am MITM attack on paired devices without being traced.
+  - A KNOB attack is especially detrimental to two Bluetooth-enabled devices sharing encrypted keys.
+- **MAC Spoofing Attack**:
+  - attacker spoof the mac address of target bluetooth-enabled device.
+  - To intercept or manipulate the data sent to the target device.
 - 
+
 
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
