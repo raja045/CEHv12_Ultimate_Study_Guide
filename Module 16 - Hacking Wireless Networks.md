@@ -64,8 +64,22 @@ The WPA3 have these four phases:
 - Client Mis-association
 - Unauthorised association
 
-### Integrity Attacks:
 
+### Integrity Attacks:
+### Condifentiality Attacks:
+### Availability Attacks:
+### Authentication Attacks:
+
+Popular Attacks:
+- Roque Access Point Attack:
+- Client Mis-association
+- Misconfigured AP attack
+- Unauthorized association
+- Ad-Hoc Connection Attack
+- Honeypot AP Attack
+- AP MAC spoofing
+- Denial-of-service Attack
+- 
 
 
 
@@ -105,7 +119,10 @@ The WPA3 have these four phases:
 - **MAC Spoofing Attack**:
   - attacker spoof the mac address of target bluetooth-enabled device.
   - To intercept or manipulate the data sent to the target device.
-- 
+
+### Bluetooth Reconnaissance Using BlueZ
+### Btlejacking uisng BtleJack
+### Cracking BLE Encryption Using Crackle
 
 
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
