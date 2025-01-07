@@ -70,16 +70,39 @@ The WPA3 have these four phases:
 ### Availability Attacks:
 ### Authentication Attacks:
 
-Popular Attacks:
-- Roque Access Point Attack:
-- Client Mis-association
-- Misconfigured AP attack
-- Unauthorized association
-- Ad-Hoc Connection Attack
-- Honeypot AP Attack
-- AP MAC spoofing
-- Denial-of-service Attack
-- 
+### Popular Attacks:
+- **Roque Access Point Attack**: In this attack fake Access point is created.
+- **Client Mis-association**: Client is connecting to the Roque Access point. This is Client Mis-association.
+- **Misconfigured AP Attack**:
+  - Organizations spend significant amount of time in defining and implementing security policies.
+  - It is possible for a client of wireless network to change network settings.
+  - Which leads to misconfigured Access Point.
+  - **SSID Broadcast**: An attacker configures the AP to broadcast SSID to authorized users.
+  - **Weak Password**:  Some network administrators incorrectly use SSIDs as basic passwords to verify authorized users.
+  - **Configuration Error**: include errors made during installation, configuration policies on an AP, human errors made while troubleshooting WLAN problems, and security changes not implemented uniformly across an architecture.
+    - SSID broadcasting is a configuration error that assists attackers in stealing an SSID, which makes the AP assume that the attacker is attempting a legitimate connection.
+- **Unauthorized association**
+  - Attacker infects the victim's machine and activate software Access Point.
+  - which will allow an unauthorised connection to the enterprise network.
+  - Instead of connecting directly to the enterprise network, attacker uses victim machine as hotspot and connect to the enterprise network.
+- **Ad-Hoc Connection Attack**
+  - WiFI clients can communicate directly via an ad-hoc mode without relaying on AP.
+  - In this attack, Attackers force the network to enable the ad-hoc mode which is insecure and does not provide strong authentication or encryption.
+  - Attacker who penetrates a wireless network can also use an ad-hoc connection to compromise the security of the organization’s wired LAN.
+- **Honeypot AP Attack**
+  - Attacker will setup an AP in a public area / mall where you will find a lot of retailers public wifi.
+  - Attacker will use the strong antenna's. By system default, Client will connect to the wifi with strong signal.
+  - Once client connected to the Attacker AP, Attacker can see all his personal informationa and can access all the senitive data.
+- **AP MAC spoofing**
+- **Denial-of-service Attack**: wireless networks are susceptible to DOS attacks.
+- **Key Reinstallation Attack(KRACK)**:
+  - KRACK exploits the four-way handshake of the WPA2 protocol.
+  - attacker captures the victim’s ANonce key that is already in use to manipulate and replay cryptographic handshake messages.
+
+
+
+
+- **Wormhole Attack**:
 
 
 
