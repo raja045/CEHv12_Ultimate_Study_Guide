@@ -289,88 +289,24 @@
 ---
 ---
 
+### DNS interrogation
 
+- Collecting information about DNS zone data.
+  - e.g. server types and their locations
+- Includes information about key hosts in the network
+- 📝 E.g. `host -t a cloudarchitecture.com`
+  - `t` stands for type of domain record `a` gives A type of domain records.
+  - Returns something likes this:
 
+    ```txt
+        cloudarchitecture.io has address 13.33.17.159
+        cloudarchitecture.io has address 13.33.17.136
+    ```
 
-
-
-### <u>Footprinting</u>
-
-- Looking for high-level information on a target
-- Types
-  - **Anonymous** - information gathering without revealing anything about yourself
-  - **Pseudonymous** - making someone else take the blame for your actions
-
-### <u>Four Main Focuses</u>
-
-- Know the security posture
-- Reduce the focus area
-- Identify vulnerabilities
-- Draw a network map
-
-### <u>Types of Footprinting</u>
-
-- **Active** - requires attacker to touch the device or network
-  - Social engineering and other communication that requires interaction with target
-- **Passive** - measures to collect information from publicly available sources
-  - Websites, DNS records, business information databases
-
-**Competitive Intelligence** - information gathered by businesses about competitors
-
-**Alexa.com** - resource for statistics about websites
-
-### <u>Methods and Tools</u>
-
-**Search Engines**
-
-- **NetCraft** - information about website and possibly OS info
-- **Job Search Sites** - information about technologies can be gleaned from job postings
-- **Google**
-  - filetype:  - looks for file types
-  - index of - directory listings
-  - info: - contains Google's information about the page
-  - intitle: - string in title
-  - inurl: - string in url
-  - link: - finds linked pages
-  - related: - finds similar pages
-  - site: - finds pages specific to that site
-- **Metagoofil** - uses Google hacks to find information in meta tags
-
-**Website Footprinting**
-
-- **Web mirroring** - allows for discrete testing offline
-  - HTTrack
-  - Black Widow
-  - Wget
-  - WebRipper
-  - Teleport Pro
-  - Backstreet Browser
-- **Archive.org** - provides cached websites from various dates which possibly have sensitive information that has been now removed
-- Attackers can use tools such as Photon to retrieve archived URLs of the target website from archive.org
-
-**Email Footprinting**
-
-- **Email  header** - may show servers and where the location of those servers are
-- **Email tracking** - services can track various bits of information including the IP address of where it was opened, where it went, etc.
-
-**DNS Footprinting**
-
-- Ports
-
-  - Name lookup - UDP 53
-  - Zone transfer - TCP 53
-
-- Zone transfer replicates all records
-
-- **Name resolvers** answer requests
-
-- **Authoritative Servers** hold all records for a namespace
-
-- **DNS Record Types**
-
-  
-
-  - | Name  | Description        | Purpose                                        |
+  - A records returns multiple IP addresses to increase speed and availability e.g. when hosting same content in multiple continents.
+- See also [DNS enumeration](./../04-enumeration/dns-enumeration.md#dns-records)
+- Tools: Security Trails
+-  - | Name  | Description        | Purpose                                        |
     | ----- | ------------------ | ---------------------------------------------- |
     | SRV   | Service            | Points to a specific service                   |
     | SOA   | Start of Authority | Indicates the authoritative NS for a namespace |
@@ -380,60 +316,84 @@
     | CNAME | Canonical Name     | Maps a name to an A reccord                    |
     | A     | Address            | Maps an hostname to an IP address              |
 
-- **DNS Poisoning** - changes cache on a machine to redirect requests to a malicious server
+#### Reverse DNS lookup
 
-- **DNSSEC** - helps prevent DNS poisoning by encrypting records
+- Use one of IP addresses that's listed as an A
+- `host 13.33.17.159`
+  - Returns `159.17.33.13.in-addr.arpa domain name pointer server-13-33-17-159.arn53.r.cloudfront.net.`
+- Multiple IP addresses can be tied to same domain
+  - multiple domain addresses that are tied to the same IP
+- Tools: DNS Recon, MX ToolBox.
 
-- **SOA Record Fields**
+#### MX records
 
-  - **Source Host** - hostname of the primary DNS
-  - **Contact Email** - email for the person responsible for the zone file
-  - **Serial Number** - revision number that increments with each change
-  - **Refresh Time** - time in which an update should occur
-  - **Retry Time** - time that a NS should wait on a failure
-  - **Expire Time** - time in which a zone transfer is allowed to complete
-  - **TTL** - minimum TTL for records within the zone
+- Can be retrieved with `-t mx`
+- Exposes which e-mail service they use
+- Have a preference number to tell the SMTP client to try (and retry) each of the relevant addresses in the list in order, until a delivery attempt succeeds
+  - The smallest preference number has the highest priority
+- 💡 Once a hacker know who the e-mail provider is, he/she can create fake-mails using the provider to test e.g.
+  - What kind of content is allowed
+  - If a file be modified so it appears as PDF but make it executable
+  - When an e-mail is labeled as spam / malicious
 
-- **IP Address Management**
+---
+---
 
-  - **ARIN** - North America
-  - **APNIC** - Asia Pacific
-  - **RIPE** - Europe, Middle East
-  - **LACNIC** - Latin America
-  - **AfriNIC** - Africa
+## Network FootPrinting
 
-- **Whois** - obtains registration information for the domain
+- Collecting network range information to use the information to map the target's network
+- Gives insights into how the network is structured and which machines belong to the network.
+- IANA - Internet Assigned Numbers Authority
+- 
 
-- **Nslookup** - performs DNS queries
+## Nmap
 
-  - nslookup [ - options ] [ hostname ]
-  - interactive zone transfer
-    - nslookup
-    - server <IP Address>
-    - set type = any
-    - ls -d domainname.com
+- Used for network discovery
+- Uses raw IP packets to determine e.g.
+  - the available hosts on the network
+  - the services offered by those hosts
+  - operating systems they are
+  - firewall types that are being used
+  - and more...
+- Not only used for malicious purposes but also for checking something is working as intended
+  - e.g. check why a port is open and confirm it's closed
+- E.g. `nmap -v -p 0-2000 -O -sV 178.128.203.1`
+  - `-v`: verbose, more output than usual
+    - `-d` prints even more.
+  - `-p`: for port
+    - default: 0-1024
+    - the higher the ranges is the longer it takes.
+  - `-O`: os detection (best guess)
+  - `-sV`: versions of all detected services (best guess)
+    - 💡 Allows you to check for vulnerabilities of a specific version of that services e.g. through [exploit database](https://www.exploit-db.com/)
+  - `178.128.203.1`: can also specify subnet also e.g. `/24`
+- 🤗 In UK and Germany it's illegal to conduct a scan on a network, more [Nmap | legal issues](https://Nmap.org/book/legal-issues.html)
+- Read more about Nmap in [Nmap | Scanning Tools](./../03-scanning-networks/scanning-tools.md#nmap)
 
-- **Dig** - unix-based command like nslookup
+## Traceroute
 
-  - dig @server name type
+- 📝 Programs used for discovering routers that are on the path to the target host.
+- You always go through multiple hops before you reach target
+  - E.g. first hop being your router, then routers & switches ISP provider and the router that sends traffic out of the country...
+- Helps hacker to collect information about
+  - network topology
+  - trusted routers
+  - firewall locations
+- Can use protocols such as `ICMP` (often), `TCP`, `UDP`, `DCPP`..
+- ❗ There can be hops that are invisible/undetectable
+  - 💡 You can craft special packets to detect them with custom time to lives, their failure
+- Uses TTL field in the IP header to discover the route.
+  - Starts by setting TTL to 1
+  - Stops at each hop on the way to the destination and providing information to the sender about that hop
+  - The TTL is incremented by 1 for each hop discovered
+- Used to create network diagrams and plan attacks.
+- Helps with e.g. man-in-the-middle attacks.
+- It records IP addresses and DNS names of discovered routers.
+- Commands
+  - Unix tool: `traceroute 178.128.203.1` (uses UDP)
+  - Using Nmap: `nmap traceroute --script traceroute-geolocation 178.128.203.1 -d`
+  - Using hping: `hping3 –traceroute -S {target ip}`
+  - Windows tool: `tracert 178.128.203.1` (uses ICMP)
 
-**Network Footprinting**
-
-- IP address range can be obtained from regional registrar (ARIN here)
-- Use traceroute to find intermediary servers
-  - traceroute uses ICMP echo in Windows
-- Windows command - tracert
-- Linux Command - traceroute
-
-**Other Tools**
-
-- **OSRFramework** - uses open source intelligence to get information about target
-- **Web Spiders** - obtain information from the website such as pages, etc.
-- **Social Engineering Tools**
-  - Maltego
-  - Social Engineering Framework (SEF)
-- **Shodan** - search engine that shows devices connected to the Internet
-
-**Computer Security Incident Response Team** (CSIRT) - point of contact for all incident response services for associates of the DHS
 
 ### [Table Of Contents](https://karsyboy.github.io/CEHv10_Ultimate_Study_Guide/)
